@@ -29,37 +29,42 @@ const TextRevealSection = () => {
 
   const textLines = [
     { text: 'At Zadynco, we specialize in ', highlight: 'AI', boldIcon: true },
-    { text: ' powered digital marketing. Our intelligent approach helps brands grow faster by combining ', highlight: 'data', boldIcon: false },
+    { text: ' powered digital marketing. Our intelligent approach helps brands grow faster by combining data ', highlight: 'data', boldIcon: false },
     { text: ' technology, and ', highlight: 'creative', boldIcon: false },
     { text: ' We build smart strategies that adapt in real time and deliver measurable results.' }
   ];
 
   return (
-    <section ref={sectionRef} className="py-32 px-8 bg-gray-50">
+    <section id="about" ref={sectionRef} className="py-32 px-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-4xl md:text-5xl leading-relaxed space-y-2">
-          {textLines.map((line, index) => (
-            <div
-              key={index}
-              className={`transition-all duration-1000 ${
-                revealedLines.includes(index)
-                  ? 'text-blue-900 opacity-100'
-                  : 'text-blue-200 opacity-30'
-              }`}
-            >
-              {line.highlight ? (
-                <>
-                  <span>{line.text}</span>
-                  <span className="inline-flex items-center mx-2 px-4 py-1 bg-blue-900 text-white rounded-full text-2xl font-semibold">
-                    {line.highlight}
-                  </span>
-                </>
-              ) : (
-                <span>{line.text}</span>
-              )}
-            </div>
-          ))}
-        </div>
+        <p className="text-4xl md:text-5xl leading-relaxed text-left text-gray-800">
+          {textLines.map((line, index) => {
+            const revealed = revealedLines.includes(index);
+
+            // determine if this segment should render an image for the highlight
+            let imgSrc = null;
+            if (line.highlight === 'AI') imgSrc = '/Images/about3.png';
+            if (line.highlight === 'data') imgSrc = '/Images/about1.png';
+            if (line.highlight === 'creative') imgSrc = '/Images/about2.png';
+
+            return (
+              <span
+                key={index}
+                className={`inline-block align-middle transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2' }`}
+                style={{ marginRight: 12 }}
+              >
+                <span className="mr-2">{line.text}</span>
+                {imgSrc ? (
+                  <img
+                    src={imgSrc}
+                    alt={line.highlight}
+                    className="inline-block w-40 h-15 rounded-full object-cover align-middle"
+                  />
+                ) : null}
+              </span>
+            );
+          })}
+        </p>
       </div>
     </section>
   );

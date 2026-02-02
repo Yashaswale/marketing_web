@@ -33,20 +33,36 @@ export default MarketingSections;
   
   /* ---------------- SUB COMPONENTS ---------------- */
   
-  const Hero = ({ bgColor, title, description, ctaText, image, buttonColor = "bg-yellow-400" }) => (
-    <section className={`${bgColor} py-20 px-6`}>
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h1 className="text-5xl font-bold mb-6">{title}</h1>
-          <p className="text-gray-700 mb-8 max-w-xl">{description}</p>
-          <button className={`${buttonColor} px-6 py-3 rounded-full font-semibold text-white hover:opacity-90 transition-opacity`}>
-            {ctaText} →
-          </button>
+  const Hero = ({ bgColor, title, description, ctaText, image, buttonColor = "bg-yellow-400" }) => {
+    const handleCTAClick = () => {
+      if (window.location.pathname === '/') {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        window.location.href = '/#contact';
+      }
+    };
+
+    return (
+      <section className={`${bgColor} py-20 px-6`}>
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-5xl font-bold mb-6">{title}</h1>
+            <p className="text-gray-700 mb-8 max-w-xl">{description}</p>
+            <button 
+              onClick={handleCTAClick}
+              className={`${buttonColor} px-6 py-3 rounded-full font-semibold text-white hover:opacity-90 transition-opacity`}
+            >
+              {ctaText} →
+            </button>
+          </div>
+          <img src={image} alt="" className="rounded-xl shadow-lg" />
         </div>
-        <img src={image} alt="" className="rounded-xl shadow-lg" />
-      </div>
-    </section>
-  );
+      </section>
+    );
+  };
   
   const Info = ({ title, description, points, image }) => (
     <section className="py-20 px-6 bg-gray-50">

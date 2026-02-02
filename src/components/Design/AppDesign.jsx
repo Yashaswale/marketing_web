@@ -91,7 +91,7 @@ const ServiceBlock = ({
           {points.map((point, i) => (
             <li
               key={i}
-              className="flex items-start gap-3 bg-blue-50 px-4 py-3 rounded-md text-gray-700"
+              className="flex items-start gap-3 bg-blue-100 px-4 py-3 rounded-md text-gray-700"
             >
               <span className="text-blue-700 font-bold mt-[2px]">
                 ▸

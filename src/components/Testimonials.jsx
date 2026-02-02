@@ -25,17 +25,25 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   const [active, setActive] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
+    if (isHovered) return; // Don't auto-slide when hovered
+
     const timer = setInterval(() => {
       setActive((prev) => (prev + 1) % testimonials.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isHovered]);
 
   return (
-    <section className="bg-gray-50 py-28 px-6">
+    <section 
+      className="py-28 px-6"
+      style={{
+        background: 'linear-gradient(180deg, rgba(251, 225, 27, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%)'
+      }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* LEFT */}
@@ -68,7 +76,7 @@ const TestimonialsSection = () => {
               return (
                 <div
                   key={index}
-                  className="absolute transition-all duration-700 ease-[cubic-bezier(.16,1,.3,1)]"
+                  className="absolute transition-all duration-700 ease-[cubic-bezier(.16,1,.3,1)] cursor-pointer"
                   style={{
                     width: "280px",
                     height: "360px",
@@ -80,6 +88,9 @@ const TestimonialsSection = () => {
                     `,
                     zIndex: 10 - position,
                   }}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  onClick={() => setActive(index)}
                 >
                   {/* BACK CARD */}
                   {position !== 0 && (
@@ -87,7 +98,7 @@ const TestimonialsSection = () => {
                   )}
 
                   {/* MAIN CARD */}
-                  <div className="bg-blue-900 text-white rounded-2xl p-6 h-full flex flex-col justify-between shadow-xl">
+                  <div className="bg-blue-700 text-white rounded-2xl p-6 h-full flex flex-col justify-between shadow-xl hover:shadow-2xl transition-shadow">
                     <p className="text-xl leading-relaxed">
                       {t.text}
                     </p>
@@ -96,7 +107,7 @@ const TestimonialsSection = () => {
                       <p className="font-semibold text-sm mt-6">
                         {t.author}
                       </p>
-                      <p className="text-xs text-blue-200">
+                      <p className="text-xs text-gray-200">
                         {t.role}
                       </p>
                     </div>
@@ -115,7 +126,7 @@ const TestimonialsSection = () => {
               onClick={() => setActive(i)}
               className={`h-2 rounded-full transition-all ${
                 i === active
-                  ? "w-8 bg-blue-900"
+                  ? "w-8 bg-blue-700"
                   : "w-2 bg-gray-400 hover:bg-gray-600"
               }`}
               aria-label={`Go to testimonial ${i + 1}`}

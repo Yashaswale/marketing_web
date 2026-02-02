@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <footer className="relative bg-[#1C1C1C] text-white overflow-hidden">
@@ -31,14 +33,14 @@ function Footer() {
                   label: "Facebook",
                   path: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z",
                 },
-                {
-                  label: "Instagram",
-                  path: "M12 2.163c3.204 0 3.584.012 4.85.07...",
-                },
-                {
-                  label: "LinkedIn",
-                  path: "M20.447 20.452h-3.554v-5.569...",
-                },
+                // {
+                //   label: "Instagram",
+                //   path: "M12 2.163c3.204 0 3.584.012 4.85.07...",
+                // },
+                // {
+                //   label: "LinkedIn",
+                //   path: "M20.447 20.452h-3.554v-5.569...",
+                // },
               ].map((icon, i) => (
                 <a
                   key={i}
@@ -57,12 +59,35 @@ function Footer() {
           {/* RIGHT */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-yellow-400 font-semibold mb-4">Service</h3>
+              <h3 className="text-yellow-400 font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-sm">
-                {["SEO", "Ads", "Content", "Design", "Analytics"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-300 hover:text-yellow-400">
-                      {item}
+                {[
+                  { label: "SEO", href: "/seo/local" },
+                  { label: "Ads", href: "/ads/local" },
+                  { label: "Content", href: "/content/personal-brand" },
+                  { label: "Design", href: "/design/website" },
+                  { label: "Analytics", href: "/analytics/strategy" },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link to={item.href} className="text-gray-300 hover:text-yellow-400 transition">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-yellow-400 font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2 text-sm">
+                {[
+                  { label: "Contact Us", href: "#contact" },
+                  { label: "Privacy Policy", href: "#privacy" },
+                  { label: "Terms & Condition", href: "#terms" },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <a href={item.href} className="text-gray-300 hover:text-yellow-400 transition">
+                      {item.label}
                     </a>
                   </li>
                 ))}
@@ -70,27 +95,16 @@ function Footer() {
             </div>
 
             <div>
-              <h3 className="text-yellow-400 font-semibold mb-4">Service</h3>
-              <ul className="space-y-2 text-sm">
-                {["Contact Us", "Privacy Policy", "Terms & Condition"].map(
-                  (item) => (
-                    <li key={item}>
-                      <a href="#" className="text-gray-300 hover:text-yellow-400">
-                        {item}
-                      </a>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
-
-            <div>
               <h3 className="text-yellow-400 font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-sm">
-                {["About Us", "How We Work", "Blog"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-300 hover:text-yellow-400">
-                      {item}
+                {[
+                  { label: "About Us", href: "#about" },
+                  { label: "How We Work", href: "#how-we-work" },
+                  { label: "Tech Development", href: "/tech/web" },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <a href={item.href} className="text-gray-300 hover:text-yellow-400 transition">
+                      {item.label}
                     </a>
                   </li>
                 ))}

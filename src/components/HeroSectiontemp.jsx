@@ -14,7 +14,19 @@ const ServiceHero = ({ data }) => {
             </p>
   
             {data.ctaText && (
-              <button className="bg-yellow-400 hover:bg-yellow-500 transition px-6 py-3 rounded-full font-semibold flex items-center gap-2">
+              <button 
+                onClick={() => {
+                  if (window.location.pathname === '/') {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  } else {
+                    window.location.href = '/#contact';
+                  }
+                }}
+                className="bg-yellow-400 hover:bg-yellow-500 transition px-6 py-3 rounded-full font-semibold flex items-center gap-2"
+              >
                 {data.ctaText}
                 <span>→</span>
               </button>

@@ -1,56 +1,67 @@
-import { useEffect, useRef } from "react";
+import React from "react";
 
-function WhySection() {
-  const ringsRef = useRef([]);
-  const labelsRef = useRef([]);
+export default function WhySection() {
+  const rings = [
+    { 
+      items: [
+        { type: "text", text: "ANALYTICS" },
+        { type: "image", src: "/Images/landing Page/orbit1.png", alt: "Logo 1" },
+        { type: "image", src: "/Images/landing Page/orbit2.png", alt: "Logo 2" },
+      ], 
+      radius: 220, 
+      duration: "40s" 
+    },
+    { 
+      items: [
+        { type: "text", text: "ENGAGEMENT" },
+        { type: "image", src: "/Images/landing Page/orbit3.png", alt: "Logo 3" },
+        { type: "text", text: "BRANDING" },
 
-  useEffect(() => {
-    ringsRef.current.forEach((ring, index) => {
-      if (!ring) return;
 
-      const duration = 40 + index * 20;
-      ring.style.animationDuration = `${duration}s`;
 
-      // counter-rotate labels
-      const labels = labelsRef.current[index] || [];
-      labels.forEach((label) => {
-        label.style.animationDuration = `${duration}s`;
-      });
-    });
-  }, []);
+      ], 
+      radius: 150, 
+      duration: "55s", 
+      reverse: true 
+    },
+  ];
 
   return (
-    <section className="bg-[#CFD9FF] py-24 md:py-32 px-6 overflow-hidden">
-      {/* ANIMATIONS */}
+    <section 
+      className="py-24 px-6 overflow-hidden"
+      style={{
+        backgroundColor: 'rgba(251, 225, 27, 0.2)'
+      }}
+    >
       <style>{`
-        @keyframes rotate-cw {
+        @keyframes orbit {
           from {
-            transform: translate(-50%, -50%) rotate(0deg);
+            transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(var(--angle) * -1));
           }
           to {
-            transform: translate(-50%, -50%) rotate(360deg);
+            transform: rotate(calc(var(--angle) + 360deg)) translateX(var(--radius)) rotate(calc(var(--angle) * -1 - 360deg));
           }
         }
 
-        @keyframes rotate-ccw {
+        @keyframes orbitReverse {
           from {
-            transform: rotate(360deg);
+            transform: rotate(calc(var(--angle) + 360deg)) translateX(var(--radius)) rotate(calc(var(--angle) * -1 - 360deg));
           }
           to {
-            transform: rotate(0deg);
+            transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(var(--angle) * -1));
           }
         }
 
         .orbit {
-          animation: rotate-cw linear infinite;
+          animation: orbit var(--duration) linear infinite;
         }
 
-        .counter-rotate {
-          animation: rotate-ccw linear infinite;
+        .orbit-rev {
+          animation: orbitReverse var(--duration) linear infinite;
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-5xl md:text-6xl font-bold text-[#111827] mb-12">
@@ -79,7 +90,7 @@ function WhySection() {
                 key={i}
                 className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all"
               >
-                <div className="bg-[#041E8C] text-white w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl">
+                <div className="bg-[#041E8C] text-black w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-[#111827] mb-2">
@@ -91,92 +102,24 @@ function WhySection() {
           </div>
         </div>
 
-        {/* RIGHT ORBITS */}
-        <div className="relative flex items-center justify-center h-[460px]">
-          <div className="relative w-[420px] h-[420px]">
-            {/* OUTER RING */}
-            <div
-              ref={(el) => (ringsRef.current[0] = el)}
-              className="orbit absolute rounded-full border-[6px] border-white"
-              style={{
-                width: 420,
-                height: 420,
-                top: "50%",
-                left: "50%",
-              }}
-            >
-              {[
-                { text: "BRANDING", pos: "top-[-14px] left-1/2 -translate-x-1/2" },
-                { text: "ENGAGEMENT", pos: "right-[-20px] top-1/2 -translate-y-1/2" },
-              ].map((item, i) => (
-                <span
-                  key={i}
-                  ref={(el) => {
-                    if (!labelsRef.current[0]) labelsRef.current[0] = [];
-                    labelsRef.current[0][i] = el;
-                  }}
-                  className={`counter-rotate absolute ${item.pos} bg-[#FACC15] px-4 py-1 rounded-full text-xs font-bold`}
-                >
-                  {item.text}
-                </span>
-              ))}
-            </div>
+        {/* RIGHT PERFECT ORBITS */}
+        <div className="relative grid place-items-center h-[520px]">
 
-            {/* MIDDLE RING */}
-            <div
-              ref={(el) => (ringsRef.current[1] = el)}
-              className="orbit absolute rounded-full border-[6px] border-white"
-              style={{
-                width: 300,
-                height: 300,
-                top: "50%",
-                left: "50%",
-              }}
-            >
-              {[
-                { text: "ANALYTICS", pos: "left-[-20px] top-1/2 -translate-y-1/2" },
-                { text: "SEO", pos: "top-6 left-1/2 -translate-x-1/2" },
-              ].map((item, i) => (
-                <span
-                  key={i}
-                  ref={(el) => {
-                    if (!labelsRef.current[1]) labelsRef.current[1] = [];
-                    labelsRef.current[1][i] = el;
-                  }}
-                  className={`counter-rotate absolute ${item.pos} bg-[#FACC15] px-4 py-1 rounded-full text-xs font-bold`}
-                >
-                  {item.text}
-                </span>
-              ))}
-            </div>
+          {/* shared center container */}
+          <div className="relative w-[clamp(300px,70vw,520px)] aspect-square">
 
-            {/* INNER RING */}
-            <div
-              ref={(el) => (ringsRef.current[2] = el)}
-              className="orbit absolute rounded-full border-[6px] border-white"
-              style={{
-                width: 200,
-                height: 200,
-                top: "50%",
-                left: "50%",
-              }}
-            >
-              <span
-                ref={(el) => {
-                  if (!labelsRef.current[2]) labelsRef.current[2] = [];
-                  labelsRef.current[2][0] = el;
-                }}
-                className="counter-rotate absolute bottom-[-14px] left-1/2 -translate-x-1/2 bg-[#FACC15] px-4 py-1 rounded-full text-xs font-bold"
-              >
-                SOCIAL ADS
-              </span>
-            </div>
+            {/* RINGS */}
+            {rings.map((ring, rIndex) => (
+              <Ring key={rIndex} {...ring} />
+            ))}
 
             {/* CENTER CORE */}
-            <div className="absolute w-24 h-24 bg-[#041E8C] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_40px_rgba(4,30,140,0.6)] flex items-center justify-center">
-              <span className="text-white text-sm font-bold">
-                ZADYNCO
-              </span>
+            <div className="absolute inset-0 grid place-items-center">
+              <div className="w-28 h-28 bg-[#041E8C] rounded-full shadow-[0_0_50px_rgba(4,30,140,0.5)] flex items-center justify-center">
+                <span className="text-white font-bold tracking-wide">
+                  ZADYNCO
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -185,4 +128,49 @@ function WhySection() {
   );
 }
 
-export default WhySection;
+/* ---------- PERFECT CONCENTRIC RING ---------- */
+function Ring({ items, radius, duration, reverse }) {
+  return (
+    <div className="absolute inset-0 grid place-items-center">
+
+      {/* path circle (always centered) */}
+      <div
+        className="absolute rounded-full border border-yellow-400"
+        style={{
+          width: radius * 2,
+          height: radius * 2,
+        }}
+      />
+
+      {items.map((item, i) => {
+        const angle = (360 / items.length) * i;
+
+        return (
+          <div
+            key={i}
+            className={reverse ? "orbit-rev absolute" : "orbit absolute"}
+            style={{
+              "--radius": `${radius}px`,
+              "--angle": `${angle}deg`,
+              "--duration": duration,
+            }}
+          >
+            {item.type === "image" ? (
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img 
+                  src={item.src} 
+                  alt={item.alt || `Logo ${i + 1}`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            ) : (
+              <span className="px-4 py-2 text-xs font-semibold bg-yellow-400 rounded-full shadow whitespace-nowrap">
+                {item.text}
+              </span>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}

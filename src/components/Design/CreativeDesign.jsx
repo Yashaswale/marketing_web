@@ -61,7 +61,7 @@ const CreativeDesignServices = ({ data }) => {
             {points.map((point, i) => (
               <li
                 key={i}
-                className="bg-blue-50 text-gray-700 px-4 py-2 rounded-md text-sm"
+                className="bg-blue-100 text-gray-700 px-4 py-2 rounded-md text-sm"
               >
                 {point}
               </li>

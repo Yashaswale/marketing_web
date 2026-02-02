@@ -3,7 +3,7 @@ import ServiceHero from "../HeroSectiontemp";
 import ProcessTimeline from "../Process";
 import ContactSection from "../ContactSection";
 import Footer from "../Footer";
-import { webDesignProcessData } from "../Design/AppDesign";
+import ShowcaseSection from "../Showcasesection";
 
 
 const WhatWeDoGrid = ({ data }) => {
@@ -41,37 +41,37 @@ const WhatWeDoGrid = ({ data }) => {
         title: "Modern Website Development",
         description:
           "Fast, responsive, and scalable websites built for performance and user experience.",
-        image: "/images/webdev-1.png",
+        image: "/Images/Techdev/App/img2.png",
       },
       {
         title: "UI/UX-Focused Design",
         description:
           "User-first design that improves clarity, trust, and conversions.",
-        image: "/images/webdev-2.png",
+        image: "/Images/Techdev/App/img3.png",
       },
       {
         title: "Landing Pages & Funnels",
         description:
           "Conversion-focused pages designed to generate leads and sales.",
-        image: "/images/webdev-3.png",
+        image: "/Images/Techdev/App/img4.png",
       },
       {
         title: "Enterprise & Scalable Web Apps",
         description:
           "Secure web apps built to handle growth, integrations, and complex workflows.",
-        image: "/images/webdev-4.png",
+        image: "/Images/Techdev/App/img5.png",
       },
       {
         title: "Backend & API Development",
         description:
           "Reliable backend systems for real-time data, integrations, and future expansion.",
-        image: "/images/webdev-5.png",
+        image: "/Images/Techdev/App/img6.png",
       },
       {
         title: "Deployment & Support",
         description:
           "From launch to updates, maintenance, and performance optimization.",
-        image: "/images/webdev-6.png",
+        image: "/Images/Techdev/App/img7.png",
       },
     ],
   };
@@ -155,14 +155,41 @@ const WhatWeDoGrid = ({ data }) => {
     );
   };
 
-  export const webDevShowcaseData = {
-    title: "We Build Websites People Love to Use",
-    images: [
-      "/images/web-showcase-1.png",
-      "/images/web-showcase-2.png",
-      "/images/web-showcase-3.png",
-    ],
-  };
+  export const appDesignProcessData = {
+  title: "Our App Design Process",
+  steps: [
+    {
+      step: 1,
+      title: "Understand",
+      description: "Your business, audience, and goals.",
+      image: "/Images/Techdev/App/process1.png",
+    },
+    {
+      step: 2,
+      title: "Plan",
+      description: "App structure, user flow, and content layout.",
+      image: "/Images/Techdev/App/process2.png",
+    },
+    {
+      step: 3,
+      title: "Design",
+      description: "Clean, modern, and brand-aligned visuals.",
+      image: "/Images/Techdev/App/process3.png",
+    },
+    {
+      step: 4,
+      title: "Review & Refine",
+      description: "Feedback-based improvements.",
+      image: "/Images/Techdev/App/process4.png",
+    },
+  ],
+};
+
+
+  const webDesignShowcaseData = {
+  title: "We Design Websites That Turn Visitors into Customers",
+  image: "/Images/Techdev/App/img8.png",
+};
 
   
   export const webDevHeroData = {
@@ -171,7 +198,7 @@ const WhatWeDoGrid = ({ data }) => {
     description:
       "We build modern, fast, and scalable websites that look premium, perform smoothly, and drive real business results.",
     ctaText: "Book a Call",
-    image: "/images/webdev-hero.png",
+    image: "/Images/Techdev/App/img1.png",
   };
   
 
@@ -189,15 +216,18 @@ const AppDevelopment = () => {
 
       {/* PROCESS (REUSE YOUR COMPONENT) */}
       <ProcessTimeline
-        title={webDesignProcessData.title}
-        steps={webDesignProcessData.steps}
+        title={appDesignProcessData.title}
+        steps={appDesignProcessData.steps}
       />
 
       {/* WHY CHOOSE US */}
       <WhyChooseUs data={webDevWhyChooseUsData} />
 
       {/* SHOWCASE GALLERY */}
-      <ShowcaseGallery data={webDevShowcaseData} />
+      <ShowcaseSection
+        title={webDesignShowcaseData.title}
+        image={webDesignShowcaseData.image}
+      />
 
       {/* CONTACT */}
       <ContactSection />

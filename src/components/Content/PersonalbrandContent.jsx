@@ -152,7 +152,19 @@ const PersonalBrandFormats = ({ data }) => {
           </div>
   
           <div className="mt-6">
-            <button className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
+            <button 
+              onClick={() => {
+                if (window.location.pathname === '/') {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                } else {
+                  window.location.href = '/#contact';
+                }
+              }}
+              className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2"
+            >
               {buttonText}
               <span>→</span>
             </button>

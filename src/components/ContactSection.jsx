@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Mail, Phone, MessageCircle } from 'lucide-react';
 
 function ContactSection() {
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ function ContactSection() {
   };
 
   return (
-    <section className="bg-blue-700 py-20 px-4 md:py-32">
+    <section id="contact" className="bg-blue-700 py-20 px-4 md:py-32">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div className="text-white">
           <h2 className="text-5xl md:text-6xl font-bold text-yellow-400 mb-6">Connect With Us</h2>
@@ -43,9 +44,15 @@ function ContactSection() {
           </p>
 
           <div className="flex gap-4 mb-12">
-            <div className="w-12 h-12 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition cursor-pointer text-2xl">📧</div>
-            <div className="w-12 h-12 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition cursor-pointer text-2xl">📞</div>
-            <div className="w-12 h-12 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition cursor-pointer text-2xl">💬</div>
+            <div className="w-12 h-12 bg-transparent bg-opacity-20 border border-white border-opacity-30 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition cursor-pointer">
+              <Mail size={20} className="text-white" />
+            </div>
+            <div className="w-12 h-12 bg-transparent bg-opacity-20 border border-white border-opacity-30 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition cursor-pointer">
+              <Phone size={20} className="text-white" />
+            </div>
+            <div className="w-12 h-12 bg-transparent bg-opacity-20 border border-white border-opacity-30 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition cursor-pointer">
+              <MessageCircle size={20} className="text-white" />
+            </div>
           </div>
 
           <img

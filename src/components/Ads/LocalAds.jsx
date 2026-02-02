@@ -58,7 +58,7 @@ const LocalAdsRow = ({
           {bullets.map((b, i) => (
             <li
               key={i}
-              className="flex items-start gap-3 bg-blue-50 px-4 py-3 rounded-md text-gray-700"
+              className="flex items-start gap-3 bg-blue-100 px-4 py-3 rounded-md text-gray-700"
             >
               <span className="text-blue-700 font-bold mt-[2px]">
                 ▸
@@ -68,7 +68,7 @@ const LocalAdsRow = ({
           ))}
         </ul>
 
-        <button className="inline-flex items-center gap-2 bg-blue-900 hover:bg-blue-800 transition text-white px-6 py-3 rounded-full text-sm font-medium">
+        <button className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-600 transition text-white px-6 py-3 rounded-full text-sm font-medium">
           {buttonText}
           <span>→</span>
         </button>

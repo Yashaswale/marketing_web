@@ -3,7 +3,6 @@ import ServiceHero from "../HeroSectiontemp";
 import ProcessTimeline from "../Process";
 import ContactSection from "../ContactSection";
 import Footer from "../Footer";
-import { webDesignProcessData } from "../Design/AppDesign";
 import ShowcaseSection from "../Showcasesection";
 
 
@@ -61,19 +60,19 @@ const WhatWeDoGrid = ({ data }) => {
         title: "Enterprise & Scalable Web Apps",
         description:
           "Secure web apps built to handle growth, integrations, and complex workflows.",
-        image: "/Images/Techdev/Website/img2.png",
+        image: "/Images/Techdev/Website/img5.png",
       },
       {
         title: "Backend & API Development",
         description:
           "Reliable backend systems for real-time data, integrations, and future expansion.",
-        image: "/Images/Techdev/Website/img3.png",
+        image: "/Images/Techdev/Website/img6.png",
       },
       {
         title: "Deployment & Support",
         description:
           "From launch to updates, maintenance, and performance optimization.",
-        image: "/Images/Techdev/Website/img4.png",
+        image: "/Images/Techdev/Website/img7.png",
       },
     ],
   };
@@ -156,8 +155,36 @@ const WhatWeDoGrid = ({ data }) => {
       </section>
     );
   };
+export const webDesignProcessData = {
+  title: "Our App Design Process",
+  steps: [
+    {
+      step: 1,
+      title: "Understand",
+      description: "Your business, audience, and goals.",
+      image: "/Images/Techdev/Website/process1.png",
+    },
+    {
+      step: 2,
+      title: "Plan",
+      description: "App structure, user flow, and content layout.",
+      image: "/Images/Techdev/Website/process2.png",
+    },
+    {
+      step: 3,
+      title: "Design",
+      description: "Clean, modern, and brand-aligned visuals.",
+      image: "/Images/Techdev/Website/process3.png",
+    },
+    {
+      step: 4,
+      title: "Review & Refine",
+      description: "Feedback-based improvements.",
+      image: "/Images/Techdev/Website/process4.png",
+    },
+  ],
+};
 
-  
 
   
   export const webDevHeroData = {
@@ -172,7 +199,7 @@ const WhatWeDoGrid = ({ data }) => {
   
 const webDesignShowcaseData = {
   title: "We Design Websites That Turn Visitors into Customers",
-  image: "/Images/Techdev/Website/img5.png",
+  image: "/Images/Techdev/Website/img8.png",
 };
 
 const WebDevelopment = () => {
