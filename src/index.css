@@ -4,6 +4,18 @@
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+@keyframes markerSwipe {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.animate-marker {
+  animation: markerSwipe 5s ease-out forwards;
+}
 
 
 
