@@ -1,3 +1,5 @@
+import bgVideo from "/Images/bgvideo.mp4";
+
 const HeroSection = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -6,9 +8,10 @@ const HeroSection = () => {
         autoPlay
         muted
         loop
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/Images/bgvideo.mp4" type="video/mp4" />
+        <source src={bgVideo} type="video/mp4" />
       </video>
 
       {/* Overlay */}
