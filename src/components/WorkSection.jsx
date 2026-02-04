@@ -27,7 +27,7 @@ const WorkThatMakesImpact = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <section className="bg-[#C4C6F9] py-10 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6">
+    <section className="bg-gray-50 py-10 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* TITLE */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 md:mb-10">
@@ -79,7 +79,7 @@ const WorkThatMakesImpact = () => {
                 {[1,2,3,4,5,6,7,8,9].map((n) => (
                   <div 
                     key={n} 
-                    className={`flex items-center justify-center ${n > 6 ? 'hidden lg:flex' : ''} ${n > 5 ? 'hidden md:flex' : ''} ${n > 4 ? 'hidden sm:flex' : ''}`}
+                    className="flex items-center justify-center"
                   >
                     <img
                       src={`/Images/landing Page/logo/logo${n}.png`}

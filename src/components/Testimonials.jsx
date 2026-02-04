@@ -39,7 +39,10 @@ const TestimonialsSection = () => {
 
   return (
     <section 
-      className="py-28 px-6 bg-[#C4C6F9]"
+      className="py-28 px-6"
+      style={{
+        background: 'linear-gradient(180deg, rgba(251, 225, 27, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%)'
+      }}
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-20 items-center">

@@ -40,10 +40,10 @@ function FAQ() {
 
   return (
     <div 
-      className="min-h-screen py-16 px-4 md:px-0 bg-[#C4C6F9]"
-      // style={{
-      //   background: 'linear-gradient(180deg, rgba(251, 225, 27, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%)'
-      // }}
+      className="min-h-screen py-16 px-4 md:px-0 "
+      style={{
+        background: 'linear-gradient(180deg, rgba(251, 225, 27, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%)'
+      }}
     >
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">

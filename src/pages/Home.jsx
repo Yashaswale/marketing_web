@@ -31,8 +31,8 @@ function Home() {
       <HeroSection />
       <TextRevealSection />
       <CreativeServicesSection />
-      <WayOfWorkingSection />
       <WhySection />
+      <WayOfWorkingSection />
       <WorkSection />
       <TestimonialsSection />
       <ContactSection />

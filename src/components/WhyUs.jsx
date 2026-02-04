@@ -7,6 +7,7 @@ export default function WhySection() {
         { type: "text", text: "ANALYTICS" },
         { type: "image", src: "/Images/landing Page/orbit1.png", alt: "Logo 1" },
         { type: "image", src: "/Images/landing Page/orbit2.png", alt: "Logo 2" },
+        { type: "text", text: "MARKETING" },
       ], 
       radius: 220, 
       duration: "40s" 
@@ -16,6 +17,7 @@ export default function WhySection() {
         { type: "text", text: "ENGAGEMENT" },
         { type: "image", src: "/Images/landing Page/orbit3.png", alt: "Logo 3" },
         { type: "text", text: "BRANDING" },
+        { type: "image", src: "/Images/landing Page/orbit4.png", alt: "Logo 4" },
       ], 
       radius: 150, 
       duration: "55s", 
@@ -25,7 +27,10 @@ export default function WhySection() {
 
   return (
     <section 
-      className="py-12 md:py-24 px-4 md:px-6 overflow-hidden bg-[#C4C6F9]"
+      className="py-12 md:py-24 px-4 md:px-6 overflow-hidden "
+      style={{
+        backgroundColor: 'rgba(251, 225, 27, 0.2)'
+      }}
     >
       <style>{`
         @keyframes orbit {
@@ -109,8 +114,8 @@ export default function WhySection() {
 
             {/* CENTER CORE */}
             <div className="absolute inset-0 grid place-items-center">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-[#041E8C] rounded-full shadow-[0_0_30px_rgba(4,30,140,0.5)] md:shadow-[0_0_50px_rgba(4,30,140,0.5)] flex items-center justify-center">
-                <span className="text-white font-bold tracking-wide text-xs sm:text-sm md:text-base">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-[#FBE11B] rounded-full shadow-[0_0_30px_rgba(4,30,140,0.5)] md:shadow-[0_0_50px_rgba(4,30,140,0.5)] flex items-center justify-center">
+                <span className="text-black font-bold tracking-wide text-xs sm:text-sm md:text-base">
                   ZADYNCO
                 </span>
               </div>
@@ -129,9 +134,9 @@ function Ring({ items, radius, duration, reverse }) {
 
       {/* path circle (always centered) - responsive radius */}
       <div
-        className="absolute rounded-full border border-yellow-400"
+        className="absolute rounded-full border-2 border-[#041E8C]"
         style={{
-          width: `min(${radius * 2}px, ${(radius / 260) * 100}%)`,
+          width: `min(${radius * 4}px, ${(radius / 260) * 100}%)`,
           height: `min(${radius * 2}px, ${(radius / 260) * 100}%)`,
         }}
       />

@@ -148,7 +148,11 @@ const CreativeServicesSection = () => {
   const totalHeight = SCROLL_STEP * services.length;
 
   return (
-    <div className="bg-[#C4C6F9]">
+    <div 
+      style={{
+        // Gradient from bottom (yellow) to top (white)
+        background: 'linear-gradient(0deg, rgba(251, 225, 27, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%)'
+      }}>
       {/* HEADING SECTION */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 md:pb-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-center text-gray-900 leading-tight">
@@ -216,31 +220,31 @@ const CreativeServicesSection = () => {
                   }}
                 >
                   <div
-                    className={`${service.color} h-full w-full rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 lg:p-10 text-white shadow-2xl`}
+                    className={`${service.color} h-full w-full rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 text-white shadow-2xl`}
                   >
-                    <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 h-full">
+                    <div className="flex flex-col lg:flex-row gap-3 sm:gap-6 h-full">
                       {/* LEFT CONTENT */}
                       <div className="flex-1 flex flex-col">
-                        <div className="flex justify-between items-start mb-3 sm:mb-4">
-                          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+                        <div className="flex justify-between items-start mb-2 sm:mb-4">
+                          <h3 className="text-xl sm:text-3xl md:text-4xl font-bold">
                             {service.title}
                           </h3>
-                          <span className="text-3xl sm:text-4xl md:text-5xl opacity-40 ml-2">
+                          <span className="text-2xl sm:text-4xl md:text-5xl opacity-40 ml-2">
                             ({String(service.id).padStart(2, "0")})
                           </span>
                         </div>
 
-                        <p className="mb-3 sm:mb-4 md:mb-6 opacity-90 text-sm sm:text-base">
+                        <p className="mb-2 sm:mb-4 md:mb-6 opacity-90 text-xs sm:text-base leading-snug sm:leading-normal">
                           {service.description}
                         </p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6 text-xs sm:text-sm flex-grow overflow-y-auto">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 mb-2 sm:mb-4 md:mb-6 text-[10px] sm:text-sm flex-grow overflow-y-auto">
                           {service.features.map((f, i) => (
                             <div
                               key={i}
-                              className="flex items-center gap-2"
+                              className="flex items-center gap-1.5 sm:gap-2"
                             >
-                              <Check size={14} className="sm:w-4 sm:h-4 flex-shrink-0" />
+                              <Check size={12} className="sm:w-4 sm:h-4 flex-shrink-0" />
                               <span>{f}</span>
                             </div>
                           ))}
@@ -257,9 +261,9 @@ const CreativeServicesSection = () => {
                               window.location.href = '/#contact';
                             }
                           }}
-                          className="flex items-center gap-2 bg-white/20 px-4 sm:px-5 py-2 rounded-full hover:bg-white/30 transition text-sm sm:text-base w-fit"
+                          className="flex items-center gap-1.5 sm:gap-2 bg-white/20 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full hover:bg-white/30 transition text-xs sm:text-base w-fit"
                         >
-                          Learn More <ArrowRight size={16} />
+                          Learn More <ArrowRight size={14} className="sm:w-4 sm:h-4" />
                         </button>
                       </div>
 
