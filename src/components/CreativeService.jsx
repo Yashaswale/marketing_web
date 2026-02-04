@@ -154,8 +154,8 @@ const CreativeServicesSection = () => {
         background: 'linear-gradient(0deg, rgba(251, 225, 27, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%)'
       }}>
       {/* HEADING SECTION */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 md:pb-16">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-center text-gray-900 leading-tight">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 lg:pt-24">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-left text-gray-900 leading-tight">
           Creative services built for impact and scale
         </h2>
       </div>
