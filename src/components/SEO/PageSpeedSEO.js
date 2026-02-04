@@ -1,7 +1,7 @@
 export const pageSpeedSEOSections = [
   {
     type: "hero",
-    bgColor: "bg-[#F3E5F5]",
+    bgColor: "bg-[#C4C6F9]",
     buttonColor: "bg-purple-600",
     title: "Google Page Speed Optimization",
     description:
@@ -26,7 +26,7 @@ export const pageSpeedSEOSections = [
   {
     type: "strategy",
     title: "Our Strategic Plan for Page Speed Optimization",
-    highlightCardColor: "bg-purple-600",
+    highlightCardColor: "bg-[#001A85]",
     steps: [
       {
         id: "01",

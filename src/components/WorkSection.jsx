@@ -27,7 +27,7 @@ const WorkThatMakesImpact = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <section className="bg-gray-50 py-10 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6">
+    <section className="bg-[#C4C6F9] py-10 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* TITLE */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 md:mb-10">

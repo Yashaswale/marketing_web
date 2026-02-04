@@ -6,7 +6,7 @@ import ShowcaseSection from "../Showcasesection";
 
 const BrandingServices = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {data.map((service, index) => (
@@ -113,7 +113,7 @@ const BrandingServices = ({ data }) => {
 
   export const BrandingWhyWorks = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* IMAGE */}
           <img
@@ -158,7 +158,7 @@ const BrandingServices = ({ data }) => {
   
 
   export const brandingHeroData = {
-    bgColor: "bg-gray-50",
+    bgColor: "bg-[#C4C6F9]",
     title: "Build a Brand That People Remember",
     description:
       "We help brands stand out with strategy-driven design that communicates clearly and scales with growth.",

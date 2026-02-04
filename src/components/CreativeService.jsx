@@ -6,9 +6,9 @@ import { Check, ArrowRight } from "lucide-react";
 ========================= */
 
 const CARD_HEIGHT = 520;
-const STACK_GAP = 28;
-const FLIP_ANGLE = 95; // >90 ensures full disappearance
-const SCROLL_STEP = CARD_HEIGHT * 0.9;
+const STACK_OFFSET = 20; // Vertical offset for stacked cards
+const SCALE_STEP = 0.05; // How much smaller each card in the stack appears
+const SCROLL_STEP = 600; // Scroll distance to move one card
 
 const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
 
@@ -37,71 +37,92 @@ const services = [
     image: "/Images/landing%20Page/services1.png",
     color: "bg-[#D9822B]",
   },
+
   {
     id: 2,
-    title: "Design",
-    description:
-      "Beautiful, conversion-focused designs that capture attention and drive engagement across all platforms and devices.",
-    features: [
-      "UI/UX Design",
-      "Brand Identity",
-      "Web Design",
-      "Mobile Design",
-      "Graphic Design",
-      "Prototyping",
-    ],
-    image: "/Images/landing%20Page/services4.png",
-    color: "bg-[#F26A4B]",
-  },
-  {
-    id: 3,
-    title: "Content",
-    description:
-      "Compelling content that tells your story, engages your audience, and drives meaningful actions.",
-    features: [
-      "Content Strategy",
-      "Copywriting",
-      "Blog Posts",
-      "Social Media Content",
-      "Video Scripts",
-      "Email Campaigns",
-    ],
-    image: "/Images/landing%20Page/services3.png",
-    color: "bg-[#1FA2A6]",
-  },
-  {
-    id: 4,
     title: "Ads",
     description:
-      "Data-driven advertising campaigns that reach the right people at the right time with maximum ROI.",
+      "We create and manage paid advertising campaigns across search and social platforms to reach the right users and maximize return on ad spend.",
     features: [
-      "Google Ads",
-      "Facebook Ads",
-      "Instagram Ads",
-      "LinkedIn Ads",
+      "Campaign Strategy",
+      "Audience Targeting",
+      "Ad Creatives",
+      "Platform Management",
+      "Budget Optimization",
       "Retargeting",
-      "Campaign Optimization",
+      "A/B Testing",
+      "Conversion Tracking",
+      "Performance Optimization",
+      "Reporting & Insights",
     ],
     image: "/Images/landing%20Page/services2.png",
     color: "bg-[#001A85]",
   },
+
+  {
+    id: 3,
+    title: "Content",
+    description:
+      "We craft purposeful content that informs your audience and builds lasting trust. Every piece supports users from first discovery to confident decision.",
+    features: [
+      "Content Strategy",
+      "Content Planning",
+      "Content Creation",
+      "Visual Content",
+      "Short-Form Content",
+      "Content Optimization",
+      "Brand Storytelling",
+      "Content Distribution",
+      "Performance Tracking",
+      "Reporting & Insights",
+    ],
+    image: "/Images/landing%20Page/services3.png",
+    color: "bg-[#1FA2A6]",
+  },
+
+  {
+    id: 4,
+    title: "Design",
+    description:
+      "We optimize your website to rank higher on search engines, attract the right audience, and drive consistent organic traffic that converts over time.",
+    features: [
+      "Brand Identity",
+      "UI/UX Design",
+      "Web Design",
+      "App Design",
+      "Landing Pages",
+      "Visual Design",
+      "Design Systems",
+      "Prototyping",
+      "UX Testing",
+      "Design Optimization",
+    ],
+    image: "/Images/landing%20Page/services4.png",
+    color: "bg-[#F26A4B]",
+  },
+
   {
     id: 5,
     title: "Analytics",
     description:
-      "Deep insights and actionable data to understand your audience and optimize every aspect of your marketing.",
+      "We track performance across all marketing channels and analyze the data. This helps us identify insights and continuously improve campaign results.",
     features: [
-      "Google Analytics",
       "Data Tracking",
+      "Dashboards",
+      "User Behavior",
       "Conversion Tracking",
-      "Performance Reports",
-      "A/B Testing",
-      "ROI Analysis",
+      "Funnel Analysis",
+      "Reporting",
+      "Data Visualization",
+      "Insights",
+      "AI Analysis",
+      "Optimization",
     ],
     image: "/Images/landing%20Page/services5.png",
     color: "bg-[#D9822B]",
   },
 ];
+
 
 /* =========================
    COMPONENT
@@ -123,14 +144,14 @@ const CreativeServicesSection = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // EXACT scroll height — no extra slack
-  const totalHeight = SCROLL_STEP * (services.length + 1);
+  // Total scroll height
+  const totalHeight = SCROLL_STEP * services.length;
 
   return (
-    <>
-      {/* HEADING SECTION - Integrated flow */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 md:pb-16">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+    <div className="bg-[#C4C6F9]">
+      {/* HEADING SECTION */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 md:pb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-center text-gray-900 leading-tight">
           Creative services built for impact and scale
         </h2>
       </div>
@@ -138,74 +159,89 @@ const CreativeServicesSection = () => {
       {/* SCROLL ANIMATION SECTION */}
       <section
         ref={sectionRef}
-        className="relative bg-white py-7"
+        className="relative pb-8"
         style={{ height: `${totalHeight}px` }}
       >
         {/* STICKY VIEWPORT */}
-        <div className="sticky top-0 h-screen flex items-center justify-center px-4">
-          <div
-            className="relative w-full max-w-6xl h-[520px]"
-            style={{ perspective: "1600px" }}
-          >
+        <div className="sticky top-0 h-screen flex items-center justify-center px-4 sm:px-6">
+          <div className="relative w-full max-w-6xl h-[380px] sm:h-[420px] md:h-[480px] lg:h-[520px]">
             {services.map((service, index) => {
+              // Calculate progress for this card
               const start = index * SCROLL_STEP;
+              const end = start + SCROLL_STEP;
               const rawProgress = (scrollY - start) / SCROLL_STEP;
               const progress = clamp(rawProgress, 0, 1);
 
-              const isGone = progress >= 1;
-
-              const rotateX = -progress * FLIP_ANGLE;
-              const translateY =
-                progress * 180 + index * STACK_GAP;
+              // Calculate how many cards are "ahead" (not yet scrolled away)
+              const cardsAhead = services.length - index - 1;
+              
+              // Position in stack (0 = top card currently showing)
+              const stackPosition = Math.max(0, cardsAhead - Math.floor(scrollY / SCROLL_STEP));
+              
+              // Calculate transforms
+              const isActive = scrollY >= start && scrollY < end;
+              const isPast = scrollY >= end;
+              
+              let translateY, scale, opacity;
+              
+              if (isPast) {
+                // Card has scrolled away - move it far up
+                translateY = -800;
+                scale = 0.8;
+                opacity = 0;
+              } else if (isActive) {
+                // Currently active card - moving away
+                translateY = -progress * 800;
+                scale = 1 - progress * 0.2;
+                opacity = 1 - progress;
+              } else {
+                // Cards waiting in stack
+                const positionInStack = index - Math.floor(scrollY / SCROLL_STEP);
+                translateY = positionInStack * STACK_OFFSET;
+                scale = 1 - (positionInStack * SCALE_STEP);
+                opacity = 1;
+              }
 
               return (
                 <div
                   key={service.id}
                   className="absolute inset-0"
                   style={{
-                    transform: isGone
-                      ? "translateY(1200px)"
-                      : `
-                        translateY(${translateY}px)
-                        rotateX(${rotateX}deg)
-                      `,
-                    opacity: isGone ? 0 : 1 - progress * 0.9,
-                    visibility: isGone ? "hidden" : "visible",
-                    pointerEvents: isGone ? "none" : "auto",
+                    transform: `translateY(${translateY}px) scale(${scale})`,
+                    opacity: opacity,
                     zIndex: services.length - index,
-                    transformOrigin: "top center",
-                    transformStyle: "preserve-3d",
-                    transition:
-                      "transform 0.18s linear, opacity 0.18s linear",
+                    transformOrigin: "center center",
+                    transition: "transform 0.15s ease-out, opacity 0.15s ease-out",
+                    pointerEvents: isPast ? "none" : "auto",
                   }}
                 >
                   <div
-                    className={`${service.color} h-full w-full rounded-3xl p-8 sm:p-10 text-white shadow-2xl`}
+                    className={`${service.color} h-full w-full rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 lg:p-10 text-white shadow-2xl`}
                   >
-                    <div className="flex flex-col lg:flex-row gap-6 h-full">
+                    <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 h-full">
                       {/* LEFT CONTENT */}
-                      <div className="flex-1">
-                        <div className="flex justify-between mb-4">
-                          <h3 className="text-3xl sm:text-4xl font-bold">
+                      <div className="flex-1 flex flex-col">
+                        <div className="flex justify-between items-start mb-3 sm:mb-4">
+                          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                             {service.title}
                           </h3>
-                          <span className="text-5xl opacity-40">
+                          <span className="text-3xl sm:text-4xl md:text-5xl opacity-40 ml-2">
                             ({String(service.id).padStart(2, "0")})
                           </span>
                         </div>
 
-                        <p className="mb-6 opacity-90">
+                        <p className="mb-3 sm:mb-4 md:mb-6 opacity-90 text-sm sm:text-base">
                           {service.description}
                         </p>
 
-                        <div className="grid grid-cols-2 gap-3 mb-6 text-sm">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6 text-xs sm:text-sm flex-grow overflow-y-auto">
                           {service.features.map((f, i) => (
                             <div
                               key={i}
                               className="flex items-center gap-2"
                             >
-                              <Check size={16} />
-                              {f}
+                              <Check size={14} className="sm:w-4 sm:h-4 flex-shrink-0" />
+                              <span>{f}</span>
                             </div>
                           ))}
                         </div>
@@ -221,13 +257,13 @@ const CreativeServicesSection = () => {
                               window.location.href = '/#contact';
                             }
                           }}
-                          className="flex items-center gap-2 bg-white/20 px-5 py-2 rounded-full hover:bg-white/30 transition"
+                          className="flex items-center gap-2 bg-white/20 px-4 sm:px-5 py-2 rounded-full hover:bg-white/30 transition text-sm sm:text-base w-fit"
                         >
                           Learn More <ArrowRight size={16} />
                         </button>
                       </div>
 
-                      {/* RIGHT IMAGE */}
+                      {/* RIGHT IMAGE - Hidden on mobile */}
                       <div className="flex-1 hidden lg:block">
                         <img
                           src={service.image}
@@ -243,7 +279,7 @@ const CreativeServicesSection = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

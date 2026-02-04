@@ -9,7 +9,7 @@ import ShowcaseSection from "../Showcasesection";
 
 const WhatWeDoGrid = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">{data.title}</h2>
   
@@ -79,7 +79,7 @@ const WhatWeDoGrid = ({ data }) => {
 
   const WhyChooseUs = ({ data }) => {
     return (
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-10">{data.title}</h2>
   
@@ -133,7 +133,7 @@ const WhatWeDoGrid = ({ data }) => {
 
   const ShowcaseGallery = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">{data.title}</h2>
   
@@ -188,7 +188,7 @@ export const webDesignProcessData = {
 
   
   export const webDevHeroData = {
-    bgColor: "bg-gray-50",
+    bgColor: "bg-[#C4C6F9]",
     title: "Web Development That Converts Visitors Into Customers",
     description:
       "We build modern, fast, and scalable websites that look premium, perform smoothly, and drive real business results.",

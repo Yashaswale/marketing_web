@@ -1,7 +1,7 @@
 export const enterpriseSEOSections = [
   {
     type: "hero",
-    bgColor: "bg-[#FFEBEE]",
+    bgColor: "bg-[#C4C6F9]",
     buttonColor: "bg-red-600",
     title: "Enterprise SEO for Large-Scale Growth",
     description:
@@ -26,7 +26,7 @@ export const enterpriseSEOSections = [
   {
     type: "strategy",
     title: "Our Strategic Plan for Enterprise SEO",
-    highlightCardColor: "bg-red-600",
+    highlightCardColor: "bg-[#001A85]",
     steps: [
       {
         id: "01",

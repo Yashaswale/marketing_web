@@ -6,7 +6,7 @@ import { BrandingWhyWorks } from "../Design/BrandingServices";
 
 const UgcAdsServices = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {data.items.map((item, index) => (
@@ -99,7 +99,7 @@ const ugcAdsServicesData = {
   };
 
 const ugcAdsHeroData = {
-    bgColor: "bg-gray-50",
+    bgColor: "bg-[#C4C6F9]",
     title: "UGC Ads That Feel Real & Convert Fast",
     description:
       "We create high-performing UGC ad creatives that blend authenticity with performance—built for Reels, Shorts, and TikTok-style placements.",

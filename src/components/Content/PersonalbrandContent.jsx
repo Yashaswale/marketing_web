@@ -39,7 +39,7 @@ const personalBrandFormatsData = {
   };
 
 const personalBrandHeroData = {
-    bgColor: "bg-gray-50",
+    bgColor: "bg-[#C4C6F9]",
     title: "Build Your Personal Brand with High-Impact Content",
     description:
       "We create content formats that help you grow authority, trust, and consistency—so your audience remembers you and chooses you.",
@@ -61,7 +61,7 @@ const personalBrandWhyWorksData = {
 
 const BrandingWhyWorks = ({ data }) => {
   return (
-    <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* IMAGE */}
         <img
@@ -95,7 +95,7 @@ const BrandingWhyWorks = ({ data }) => {
 
 const PersonalBrandFormats = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-14">{data.title}</h2>
   

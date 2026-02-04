@@ -2,7 +2,7 @@ const ShowcaseSection = ({
     title,
     description,
     image,
-    bg = "bg-gray-50",
+    bg = "bg-[#C4C6F9]",
   }) => {
     return (
       <section className={`${bg} py-28 px-6`}>

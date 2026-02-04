@@ -6,9 +6,10 @@ import Footer from "../Footer";
 import ShowcaseSection from "../Showcasesection";
 
 
+
 const WhatWeDoGrid = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">{data.title}</h2>
   
@@ -76,9 +77,39 @@ const WhatWeDoGrid = ({ data }) => {
     ],
   };
 
+  export const webDesignProcessData = {
+    title: "Our App Design Process",
+    steps: [
+      {
+        step: 1,
+        title: "Understand",
+        description: "Your business, audience, and goals.",
+        image: "/Images/Techdev/App/process1.png",
+      },
+      {
+        step: 2,
+        title: "Plan",
+        description: "App structure, user flow, and content layout.",
+        image: "/Images/Techdev/App/process2.png",
+      },
+      {
+        step: 3,
+        title: "Design",
+        description: "Clean, modern, and brand-aligned visuals.",
+        image: "/Images/Techdev/App/process3.png",
+      },
+      {
+        step: 4,
+        title: "Review & Refine",
+        description: "Feedback-based improvements.",
+        image: "/Images/Techdev/App/process4.png",
+      },
+    ],
+  };
+
   const WhyChooseUs = ({ data }) => {
     return (
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-10">{data.title}</h2>
   
@@ -132,7 +163,7 @@ const WhatWeDoGrid = ({ data }) => {
 
   const ShowcaseGallery = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">{data.title}</h2>
   
@@ -155,45 +186,14 @@ const WhatWeDoGrid = ({ data }) => {
     );
   };
 
-  export const appDesignProcessData = {
-  title: "Our App Design Process",
-  steps: [
-    {
-      step: 1,
-      title: "Understand",
-      description: "Your business, audience, and goals.",
-      image: "/Images/Techdev/App/process1.png",
-    },
-    {
-      step: 2,
-      title: "Plan",
-      description: "App structure, user flow, and content layout.",
-      image: "/Images/Techdev/App/process2.png",
-    },
-    {
-      step: 3,
-      title: "Design",
-      description: "Clean, modern, and brand-aligned visuals.",
-      image: "/Images/Techdev/App/process3.png",
-    },
-    {
-      step: 4,
-      title: "Review & Refine",
-      description: "Feedback-based improvements.",
-      image: "/Images/Techdev/App/process4.png",
-    },
-  ],
-};
-
-
   const webDesignShowcaseData = {
-  title: "We Design Websites That Turn Visitors into Customers",
-  image: "/Images/Techdev/App/img8.png",
-};
+    title: "We Design Websites That Turn Visitors into Customers",
+    image: "/Images/Techdev/App/img8.png",
+  };
 
   
   export const webDevHeroData = {
-    bgColor: "bg-gray-50",
+    bgColor: "bg-[#C4C6F9]",
     title: "Web Development That Converts Visitors Into Customers",
     description:
       "We build modern, fast, and scalable websites that look premium, perform smoothly, and drive real business results.",
@@ -216,8 +216,8 @@ const AppDevelopment = () => {
 
       {/* PROCESS (REUSE YOUR COMPONENT) */}
       <ProcessTimeline
-        title={appDesignProcessData.title}
-        steps={appDesignProcessData.steps}
+        title={webDesignProcessData.title}
+        steps={webDesignProcessData.steps}
       />
 
       {/* WHY CHOOSE US */}
@@ -228,7 +228,6 @@ const AppDevelopment = () => {
         title={webDesignShowcaseData.title}
         image={webDesignShowcaseData.image}
       />
-
       {/* CONTACT */}
       <ContactSection />
 

@@ -1,7 +1,7 @@
 export const ecommerceSEOSections = [
   {
     type: "hero",
-    bgColor: "bg-[#E8F5E9]",
+    bgColor: "bg-[#C4C6F9]",
     buttonColor: "bg-green-600",
     title: "Ecommerce SEO That Drives Sales",
     description:
@@ -26,7 +26,7 @@ export const ecommerceSEOSections = [
   {
     type: "strategy",
     title: "Our Strategic Plan for Ecommerce SEO",
-    highlightCardColor: "bg-green-600",
+    highlightCardColor: "bg-[#001A85]",
     steps: [
       {
         id: "01",

@@ -33,7 +33,7 @@ export default MarketingSections;
   
   /* ---------------- SUB COMPONENTS ---------------- */
   
-  const Hero = ({ bgColor, title, description, ctaText, image, buttonColor = "bg-yellow-400" }) => {
+  const Hero = ({ bgColor, title, description, ctaText, image, buttonColor = "bg-[#C4C6F9]" }) => {
     const handleCTAClick = () => {
       if (window.location.pathname === '/') {
         const contactSection = document.getElementById('contact');
@@ -65,7 +65,7 @@ export default MarketingSections;
   };
   
   const Info = ({ title, description, points, image }) => (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-[#C4C6F9]">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-4xl font-bold mb-6">{title}</h2>
@@ -86,7 +86,7 @@ export default MarketingSections;
     steps,
     highlightCardColor = "bg-yellow-400",
   }) => (
-    <section className="py-24 px-6 bg-gray-100">
+    <section className="py-24 px-6 bg-[#C4C6F9]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-16">{title}</h2>
   
@@ -151,7 +151,7 @@ export default MarketingSections;
     
   
   const Benefits = ({ title, image, benefits, benefitIconColor = "text-green-500", benefitIcon = "✔" }) => (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-[#C4C6F9]">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <img src={image} alt="" className="rounded-xl shadow-lg" />
         <div>

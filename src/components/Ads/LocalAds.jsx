@@ -9,7 +9,7 @@ import Footer from "../Footer";
 
 const LocalAdsServices = ({ data }) => {
   return (
-    <section className="py-28 px-6 bg-gray-50">
+    <section className="py-28 px-6 bg-[#C4C6F9]">
       <div className="max-w-7xl mx-auto space-y-24">
         {data.items.map((item, index) => (
           <LocalAdsRow key={index} {...item} />
@@ -152,7 +152,7 @@ const localAdsServicesData = {
 };
 
 const localAdsHeroData = {
-  bgColor: "bg-gray-50",
+  bgColor: "bg-[#C4C6F9]",
   title: "Local Ads That Drive Real Footfall & Conversions",
   description:
     "We run hyper-local ad campaigns that target high-intent zones, track store visits, and help you win customers right when they’re ready to buy.",

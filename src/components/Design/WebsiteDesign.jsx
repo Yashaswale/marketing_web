@@ -34,7 +34,7 @@ const ServiceRow = ({ image, title, description, points, reverse }) => {
 // Services section function or component
 const WebDesignServices = () => {
     return (
-        <section className="py-24 px-6 bg-gray-50">
+        <section className="py-24 px-6 bg-[#C4C6F9]">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold mb-14">
                     End-to-End Web Design Services
@@ -123,7 +123,7 @@ export const webDesignProcessData = {
 
 // Hero section data
 export const websiteDesignHero = {
-    bgColor: "bg-[#FFF7C2]",
+    bgColor: "bg-[#C4C6F9]",
     title: "Turn Visitors into Customers with Smart Website Design",
     description:
         "We design beautiful, user-friendly websites that solve real problems and drive engagement, retention, and growth.",

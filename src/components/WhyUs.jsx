@@ -25,10 +25,7 @@ export default function WhySection() {
 
   return (
     <section 
-      className="py-12 md:py-24 px-4 md:px-6 overflow-hidden"
-      style={{
-        backgroundColor: 'rgba(251, 225, 27, 0.2)'
-      }}
+      className="py-12 md:py-24 px-4 md:px-6 overflow-hidden bg-[#C4C6F9]"
     >
       <style>{`
         @keyframes orbit {

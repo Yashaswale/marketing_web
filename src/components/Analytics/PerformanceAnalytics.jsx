@@ -5,7 +5,7 @@ import Footer from "../Footer";
 
 const AnalyticsServices = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto space-y-12">
           {data.items.map((item, index) => (
             <AnalyticsServiceRow
@@ -120,7 +120,7 @@ const AnalyticsServices = ({ data }) => {
 
   const WhatYouGain = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* IMAGE */}
           <img
@@ -163,7 +163,7 @@ const AnalyticsServices = ({ data }) => {
   };
 
   export const analyticsHeroData = {
-    bgColor: "bg-gray-50",
+    bgColor: "bg-[#C4C6F9]",
     title: "Analytics & Tracking That Helps You Scale Smarter",
     description:
       "We set up tracking, dashboards, and measurement frameworks so you always know what’s working—and what to optimize next.",

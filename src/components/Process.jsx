@@ -1,6 +1,6 @@
 const ProcessTimeline = ({ title, steps }) => {
   return (
-    <section className="py-28 bg-gray-50 px-6">
+    <section className="py-28 bg-[#C4C6F9] px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-24 text-gray-900">
           {title}

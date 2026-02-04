@@ -1,12 +1,12 @@
 export const internationalSEOSections = [
   {
     type: "hero",
-    bgColor: "bg-[#E3F2FD]",
+    bgColor: "bg-[#C4C6F9]",
     buttonColor: "bg-blue-600",
-    title: "International SEO That Expands Your Global Reach",
+    title: "Grow Your Visibility Across Borders",
     description:
-      "Scale your business across borders with strategic international SEO that targets multiple markets and languages.",
-    ctaText: "Get a SEO Audit",
+      "We help businesses rank globally, reach the right markets, and attract international customers with a structured, data-driven International SEO strategy.",
+    ctaText: "Book Demo",
     image: "/Images/SEO/int_seo/img1.png",
   },
 
@@ -14,11 +14,11 @@ export const internationalSEOSections = [
     type: "info",
     title: "What Is International SEO?",
     description:
-      "International SEO helps your website rank in different countries and languages, reaching global audiences effectively.",
+      "International SEO is the process of optimizing your website to rank in multiple countries and languages. It ensures search engines understand who your content is for and where it should appear, based on location and language intent. ",
     points: [
-      "Multi-country businesses",
-      "E-commerce with global shipping",
-      "Brands expanding internationally",
+      "Target global audiences accurately",
+      "Rank in country-specific Google results",
+      "Deliver localized experiences that convert",
     ],
     image: "/Images/SEO/int_seo/img2.png",
   },
@@ -26,38 +26,38 @@ export const internationalSEOSections = [
   {
     type: "strategy",
     title: "Our Strategic Plan for International SEO",
-    highlightCardColor: "bg-blue-600",
+    highlightCardColor: "bg-[#001A85]",
     steps: [
       {
         id: "01",
-        title: "Market Research & Targeting",
+        title: "Global Market & Website Audit",
         description:
-          "Identify target markets, languages, and competitor analysis.",
+          "Analyze current global visibility, target regions, competitors, site structure, and technical readiness.",
         highlight: true,
       },
       {
         id: "02",
-        title: "Technical SEO Setup",
+        title: "International SEO Strategy & Roadmap",
         description:
-          "Configure hreflang tags, CDN, and country-specific domains.",
+          "Define target countries, languages, URL structure, keywords, and KPIs.",
       },
       {
         id: "03",
-        title: "Content Localization",
+        title: "Technical International SEO Setup",
         description:
-          "Translate and adapt content for each target market.",
+          "Implement hreflang, geo-targeting, international sitemaps, and correct indexing signals.",
       },
       {
         id: "04",
-        title: "Link Building & Authority",
+        title: "Localized Content & On-Page Optimization",
         description:
-          "Build international backlinks and domain authority.",
+          "Optimize country-specific pages, localized keywords, metadata, and UX.",
       },
       {
         id: "05",
-        title: "Monitoring & Optimization",
+        title: "Authority, Tracking & Scaling",
         description:
-          "Track performance across markets and optimize continuously.",
+          "Build international backlinks, track region-wise performance, and scale winning markets.",
       },
       {
         id: "06",
@@ -73,11 +73,11 @@ export const internationalSEOSections = [
     benefitIconColor: "text-blue-600",
     benefitIcon: "🌍",
     benefits: [
-      "Increased global visibility",
-      "Higher traffic from multiple markets",
-      "Better conversion rates with localized content",
-      "Competitive advantage in new markets",
-      "Scalable growth strategy",
+      "Increased visibility in global search markets",
+      "Accurate targeting by country and language",
+      "Higher international traffic and conversions ",
+      "Better indexing and ranking control",
+      "Scalable global expansion",
     ],
   },
 ];

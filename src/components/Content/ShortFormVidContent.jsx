@@ -5,7 +5,7 @@ import Footer from "../Footer";
 
 // Local data for the Short-Form Video Content page
 const shortFormVidHeroData = {
-    bgColor: "bg-gray-50",
+    bgColor: "bg-[#C4C6F9]",
     title: "Short-Form Video Content That Stops the Scroll",
     description:
       "We create short-form video content formats that boost engagement, build trust, and help your brand grow consistently across platforms.",
@@ -49,7 +49,7 @@ const shortFormVidFormatsData = {
 
 const PersonalBrandFormats = ({ data }) => {
   return (
-    <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-[#C4C6F9]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-14">{data.title}</h2>
 
