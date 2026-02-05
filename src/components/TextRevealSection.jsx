@@ -81,9 +81,9 @@ const TextRevealSection = () => {
     <>
       <section
         ref={sectionRef}
-        className="py-28 px-6 relative"
+        className="pt-28 pb-0 px-6 relative"
         style={{
-          minHeight: "110vh",
+          minHeight: "90vh",
           background:
             "linear-gradient(180deg, rgba(251,225,27,0.25) 0%, rgba(255,255,255,0.25) 100%)",
         }}
@@ -93,7 +93,7 @@ const TextRevealSection = () => {
         <div className="flex justify-center  m-2 sm:m-4 md:m-8">
           <div className="inline-flex items-center gap-2 bg-[#1a1f5c] text-white px-4 py-2 rounded-full">
             <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-            <span className="text-sm sm:text-base font-medium">About us</span>
+            <span className="text-lg sm:text-2xl font-medium">About us</span>
           </div>
         </div>
         <div className="max-w-6xl mx-auto text-center">

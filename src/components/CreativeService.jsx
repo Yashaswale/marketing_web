@@ -148,22 +148,30 @@ const CreativeServicesSection = () => {
   const totalHeight = SCROLL_STEP * services.length;
 
   return (
-    <div 
+    <div
       style={{
         // Gradient from bottom (yellow) to top (white)
         background: 'linear-gradient(0deg, rgba(251, 225, 27, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%)'
       }}>
 
-        {/* About us badge - centered */}
-        <div className="flex justify-center  m-2 sm:m-4 md:m-8">
-          <div className="inline-flex items-center gap-2 bg-[#1a1f5c] text-white px-4 py-2 rounded-full">
-            <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-            <span className="text-sm sm:text-base font-medium">Our Services</span>
-          </div>
+      {/* About us badge - centered */}
+      <div className="flex justify-center  m-2 sm:m-4 md:m-8 pt-8">
+        <div className="inline-flex items-center gap-2 bg-[#1a1f5c] text-white px-4 py-2 rounded-full">
+          <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
+          <span className="text-xl sm:text-2xl font-medium">Our Services</span>
         </div>
+      </div>
       {/* HEADING SECTION */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-4 sm:pt-8 md:pt-12 lg:pt-16">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-left text-gray-900 leading-tight">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-2 sm:pt-8 md:pt-4 lg:pt-8">
+        <h2
+          className="
+          text-xl sm:text-4xl md:text-5xl lg:text-5xl
+          font-bold
+          text-center
+          text-gray-900
+          leading-tight
+        "
+        >
           Creative services built for impact and scale
         </h2>
       </div>
@@ -186,16 +194,16 @@ const CreativeServicesSection = () => {
 
               // Calculate how many cards are "ahead" (not yet scrolled away)
               const cardsAhead = services.length - index - 1;
-              
+
               // Position in stack (0 = top card currently showing)
               const stackPosition = Math.max(0, cardsAhead - Math.floor(scrollY / SCROLL_STEP));
-              
+
               // Calculate transforms
               const isActive = scrollY >= start && scrollY < end;
               const isPast = scrollY >= end;
-              
+
               let translateY, scale, opacity;
-              
+
               if (isPast) {
                 // Card has scrolled away - move it far up
                 translateY = -800;
@@ -258,7 +266,7 @@ const CreativeServicesSection = () => {
                           ))}
                         </div>
 
-                        <button 
+                        <button
                           onClick={() => {
                             if (window.location.pathname === '/') {
                               const contactSection = document.getElementById('contact');
