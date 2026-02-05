@@ -93,7 +93,7 @@ const TextRevealSection = () => {
         <div className="flex justify-center  m-2 sm:m-4 md:m-8">
           <div className="inline-flex items-center gap-2 bg-[#1a1f5c] text-white px-4 py-2 rounded-full">
             <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-            <span className="text-lg sm:text-2xl font-medium">About us</span>
+            <span className="text-xl sm:text-3xl font-medium">About us</span>
           </div>
         </div>
         <div className="max-w-6xl mx-auto text-center">
