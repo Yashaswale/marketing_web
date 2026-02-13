@@ -46,7 +46,7 @@ const WorkThatMakesImpact = () => {
         }
       `}</style>
 
-      <section className="bg-gray-50 py-28 px-6">
+      <section className="bg-gray-50 pt-28 pb-10 px-6">
         <div className="max-w-7xl mx-auto">
           {/* TITLE */}
           <h2 className="text-4xl font-bold text-gray-900 mb-10">
@@ -108,7 +108,7 @@ const WorkThatMakesImpact = () => {
               />
 
               {/* Scrolling track */}
-              <div className="py-4 lg:py-6 overflow-hidden">
+              <div className="py-5 overflow-hidden">
                 <div
                   className="marquee-track flex items-center gap-8 lg:gap-16"
                   style={{ width: "max-content" }}

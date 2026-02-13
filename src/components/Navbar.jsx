@@ -27,9 +27,9 @@ const Navbar = () => {
         {/* Logo + Brand in one line */}
         <div className="flex items-center gap-2 sm:gap-3">
           <img
-            src="/Images/logo.png"
+            src="/Images/logo1.jpg"
             alt="Zadynco Logo"
-            className="h-9 w-9 sm:h-12 sm:w-12 object-contain"
+            className="h-9 w-9 sm:h-12 sm:w-12 object-contain rounded-full"
           />
           <h1 className="text-xl sm:text-3xl font-bold text-yellow-400">
             ZADYNCO.
