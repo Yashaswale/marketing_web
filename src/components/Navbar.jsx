@@ -23,9 +23,23 @@ const Navbar = () => {
 
   return (
     <nav ref={navRef} className="relative z-50 flex items-center justify-between px-8 py-6 bg-blue-700 backdrop-blur-sm">
-      <Link to="/" className="flex flex-col">
-        <h1 className="text-3xl font-bold text-yellow-400">ZADYNCO.</h1>
-        <p className="text-xs text-white/90">AI Powered Digital Marketing & Tech Development</p>
+      <Link to="/" className="flex flex-col items-start">
+        {/* Logo + Brand in one line */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <img
+            src="/Images/logo.png"
+            alt="Zadynco Logo"
+            className="h-9 w-9 sm:h-12 sm:w-12 object-contain"
+          />
+          <h1 className="text-xl sm:text-3xl font-bold text-yellow-400">
+            ZADYNCO.
+          </h1>
+        </div>
+
+        {/* Tagline */}
+        <p className="text-[10px] sm:text-xs text-white/90 leading-tight">
+          AI Powered Digital Marketing & Tech Development
+        </p>
       </Link>
 
       <div className="hidden lg:flex items-center gap-8">
@@ -265,8 +279,8 @@ const Navbar = () => {
             </div>
           )}
         </div>
-        <Link 
-          to="/#about" 
+        <Link
+          to="/#about"
           className="text-white hover:text-yellow-400 transition-colors"
           onClick={(e) => {
             if (window.location.pathname === '/') {
@@ -288,7 +302,7 @@ const Navbar = () => {
         >
           About Us
         </Link>
-        <Link 
+        <Link
           to="/#contact"
           className="px-6 py-2 bg-white text-blue-700 font-semibold rounded hover:bg-yellow-400 transition-colors"
           onClick={(e) => {
@@ -313,7 +327,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <button 
+      <button
         className="lg:hidden text-white"
         onClick={() => setIsMobileOpen(!isMobileOpen)}
       >
@@ -541,8 +555,8 @@ const Navbar = () => {
             </div>
 
             {/* About Us */}
-            <Link 
-              to="/#about" 
+            <Link
+              to="/#about"
               className="block text-white hover:text-yellow-400 transition-colors py-3 px-2"
               onClick={(e) => {
                 setIsMobileOpen(false);
@@ -566,7 +580,7 @@ const Navbar = () => {
             </Link>
 
             {/* Book a Call */}
-            <Link 
+            <Link
               to="/#contact"
               className="block px-6 py-3 bg-[#C4C6F9] text-blue-700 font-semibold rounded hover:bg-yellow-400 transition-colors text-center mt-2"
               onClick={(e) => {

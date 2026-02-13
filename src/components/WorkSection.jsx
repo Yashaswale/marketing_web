@@ -23,93 +23,116 @@ const tabs = [
   },
 ];
 
+const logoCount = 9;
+const logos = Array.from({ length: logoCount }, (_, i) => i + 1);
+const marqueeLogos = [...logos, ...logos];
+
 const WorkThatMakesImpact = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <section className="bg-gray-50 py-10 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
-        {/* TITLE */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 md:mb-10">
-          Work That Makes Impact
-        </h2>
+    <>
+      <style>{`
+        @keyframes marquee-slide {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+          animation: marquee-slide 22s linear infinite;
+          will-change: transform;
+        }
+        .marquee-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
 
-        {/* TABS - Mobile: 2 columns, Tablet+: single row */}
-        <div className="grid grid-cols-2 sm:flex sm:flex-wrap bg-blue-100 rounded-lg sm:rounded-xl p-1 mb-6 sm:mb-8 md:mb-12 gap-1">
-          {tabs.map((tab) => {
-            const isActive = activeTab.id === tab.id;
-            const isYellowTab = tab.id === 'mobile' || tab.id === 'content';
-            const activeBgClass = isYellowTab ? 'bg-yellow-400 text-gray-900' : 'bg-blue-700 text-white';
+      <section className="bg-gray-50 py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          {/* TITLE */}
+          <h2 className="text-4xl font-bold text-gray-900 mb-10">
+            Work That Makes Impact
+          </h2>
 
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab)}
-                className={`sm:flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 text-xs sm:text-sm md:text-base font-medium rounded-lg transition-all duration-200 ${
-                  isActive
-                    ? `${activeBgClass} shadow-md`
-                    : "text-blue-900 hover:bg-blue-200"
-                }`}
-              >
-                <span className="block sm:hidden leading-tight">
-                  {tab.label.split(' ').slice(0, 2).join(' ')}
-                </span>
-                <span className="hidden sm:inline">{tab.label}</span>
-              </button>
-            );
-          })}
+          {/* TABS */}
+          <div className="flex flex-wrap bg-blue-100 rounded-xl p-1 mb-12">
+            {tabs.map((tab) => {
+              const isActive = activeTab.id === tab.id;
+              const isYellowTab = tab.id === "mobile" || tab.id === "content";
+              const activeBgClass = isYellowTab
+                ? "bg-yellow-400 text-gray-900"
+                : "bg-blue-700 text-white";
+
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab)}
+                  className={`flex-1 px-6 py-3 text-sm font-medium rounded-lg transition-all ${
+                    isActive
+                      ? `${activeBgClass} shadow`
+                      : "text-blue-900 hover:bg-blue-200"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* IMAGE */}
+          <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg">
+            <img
+              src={activeTab.image}
+              alt={activeTab.label}
+              className="w-full h-[520px] object-cover transition-opacity duration-500"
+            />
+          </div>
         </div>
 
-        {/* IMAGE - with key prop to force re-render on tab change */}
-        <div className="relative rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden bg-white shadow-lg">
-          <img
-            key={activeTab.id}
-            src={activeTab.image}
-            alt={activeTab.label}
-            className="w-full h-[220px] sm:h-[320px] md:h-[400px] lg:h-[520px] object-cover animate-fadeIn"
-          />
-        </div>
+        {/* LOGO STRIP — full bleed, -mx-6 cancels section padding */}
+        <div className="mt-8 -mx-6">
+          <div className="bg-gray-900 w-full fixed bottom-0 left-0 z-40 lg:static lg:w-full overflow-hidden">
+            <div className="relative">
+              {/* Left fade */}
+              <div
+                className="absolute left-0 top-0 h-full w-16 z-10 pointer-events-none"
+                style={{
+                  background: "linear-gradient(to right, #111827 0%, transparent 100%)",
+                }}
+              />
+              {/* Right fade */}
+              <div
+                className="absolute right-0 top-0 h-full w-16 z-10 pointer-events-none"
+                style={{
+                  background: "linear-gradient(to left, #111827 0%, transparent 100%)",
+                }}
+              />
 
-        {/* LOGO STRIP */}
-        <div className="mt-6 sm:mt-8 md:mt-10">
-          <div className="bg-gray-900 w-full rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden">
-            <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-4 sm:py-5 md:py-6">
-              {/* Mobile: 3 columns with 2 rows visible */}
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
-                {[1,2,3,4,5,6,7,8,9].map((n) => (
-                  <div 
-                    key={n} 
-                    className="flex items-center justify-center"
-                  >
-                    <img
-                      src={`/Images/landing Page/logo/logo${n}.png`}
-                      alt={`Partner logo ${n}`}
-                      className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
-                    />
-                  </div>
-                ))}
+              {/* Scrolling track */}
+              <div className="py-4 lg:py-6 overflow-hidden">
+                <div
+                  className="marquee-track flex items-center gap-8 lg:gap-16"
+                  style={{ width: "max-content" }}
+                >
+                  {marqueeLogos.map((n, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-center"
+                      style={{ minWidth: "80px" }}
+                    >
+                      <img
+                        src={`/Images/landing Page/logo/logo${n}.png`}
+                        alt={`logo-${n}`}
+                        className="h-6 sm:h-8 md:h-10 lg:h-8 object-contain opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Add fadeIn animation */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-in-out;
-        }
-      `}</style>
-    </section>
+      </section>
+    </>
   );
 };
 

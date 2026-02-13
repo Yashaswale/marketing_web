@@ -7,7 +7,7 @@ import ShowcaseSection from "../Showcasesection";
 
 const CreativeDesignServices = ({ data }) => {
     return (
-      <section className="py-24 px-6 bg-[#C4C6F9]">
+      <section className="py-24 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-16">
             {data.title}
@@ -115,7 +115,7 @@ const CreativeDesignServices = ({ data }) => {
   
 
   export const creativeDesignHeroData = {
-    bgColor: "bg-[#C4C6F9]",
+    bgColor: "bg-gray-50",
     title: "Creative Designs That Capture Attention & Drive Action",
     description:
       "We design scroll-stopping creatives for social media, ads, and content that help brands connect, communicate, and convert.",
