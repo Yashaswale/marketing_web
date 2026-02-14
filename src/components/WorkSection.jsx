@@ -108,7 +108,7 @@ const WorkThatMakesImpact = () => {
               />
 
               {/* Scrolling track */}
-              <div className="py-5 overflow-hidden">
+              <div className="py-2 overflow-hidden">
                 <div
                   className="marquee-track flex items-center gap-8 lg:gap-16"
                   style={{ width: "max-content" }}

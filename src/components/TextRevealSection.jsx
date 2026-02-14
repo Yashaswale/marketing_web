@@ -7,17 +7,11 @@ const TextRevealSection = () => {
   const content = [
     { text: "At Zadynco, we specialize in AI-powered ", type: "text" },
     { type: "badge", image: "/Images/about4.png" },
-    {
-      text: "Our intelligent approach helps brands grow faster by combining Data",
-      type: "text",
-    },
+    { text: "Our intelligent approach helps brands grow faster by combining Data", type: "text" },
     { type: "badge", image: "/Images/about1.png" },
     { text: "technology and", type: "text" },
     { type: "badge", image: "/Images/about2.png" },
-    {
-      text: "creative strategies that adapt in real time and deliver measurable results.",
-      type: "text",
-    },
+    { text: "creative strategies that adapt in real time and deliver measurable results.", type: "text" },
   ];
 
   const marqueeItems = [
@@ -37,7 +31,7 @@ const TextRevealSection = () => {
   });
 
   /* -----------------------------
-     Smooth reveal
+     Smooth reveal using IntersectionObserver
   ----------------------------- */
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,14 +45,16 @@ const TextRevealSection = () => {
   }, []);
 
   /* -----------------------------
-     Badge component
+     Components
   ----------------------------- */
   const Badge = ({ image, delay }) => (
     <span
       className={`
         inline-flex items-center mx-2 align-middle
         transition-all duration-700 ease-out
-        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
+        ${isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-5"}
       `}
       style={{ transitionDelay: delay }}
     >
@@ -66,8 +62,8 @@ const TextRevealSection = () => {
         src={image}
         alt=""
         className="
-          h-[1.1em]
-          w-auto
+          h-[1.1em]        /* matches text height */
+          w-auto           /* wider naturally */
           rounded-full
           shadow-md
           object-cover
@@ -76,28 +72,42 @@ const TextRevealSection = () => {
     </span>
   );
 
+
+  /* -----------------------------
+     UI
+  ----------------------------- */
+
   return (
     <>
       <section
         ref={sectionRef}
         className="pt-28 pb-0 px-6 relative bg-white"
-        style={{ minHeight: "90vh" }}
+        style={{
+          minHeight: "90vh",
+        }}
       >
-        {/* About badge */}
-        <div className="flex justify-center m-2 sm:m-4 md:m-8">
+{/* <div className="mx-auto">
+        <p className="text-xl text-black text-center max-w-3xl">
+          We help individuals and businesses grow with smarter strategies, powerful<br />
+          technology, and meaningful creative execution.
+        </p>
+
+        </div> */}
+
+        {/* About us badge - centered */}
+
+        <div className="flex justify-center  m-2 sm:m-4 md:m-8">
+          
           <div className="inline-flex items-center gap-2 bg-[#1a1f5c] text-white px-4 py-2 rounded-full">
             <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-
-            {/* reduced size here too for consistency */}
-            <span className="text-lg sm:text-2xl font-medium">About us</span>
+            <span className="text-xl sm:text-3xl font-medium">About us</span>
           </div>
         </div>
-
         <div className="max-w-6xl mx-auto text-center">
-          {/* TEXT SIZE ↓ 1 step each breakpoint */}
+
           <p
             className="
-              text-xl sm:text-2xl md:text-3xl lg:text-4xl
+              text-2xl sm:text-3xl md:text-4xl lg:text-5xl
               leading-relaxed
               font-medium
               text-[#1a1f5c]
@@ -110,13 +120,15 @@ const TextRevealSection = () => {
                 <span
                   key={i}
                   className={`
-                    inline-block mx-[6px]   /* more word spacing */
+                    inline-block mx-[3px]
                     transition-all duration-700 ease-out
                     ${isVisible
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-5"}
                   `}
-                  style={{ transitionDelay: `${i * 40}ms` }}
+                  style={{
+                    transitionDelay: `${i * 40}ms`,
+                  }}
                 >
                   {word.text}
                 </span>
@@ -129,6 +141,7 @@ const TextRevealSection = () => {
       {/* -----------------------------
           Marquee
       ----------------------------- */}
+
       <div className="w-full bg-[#1a1a1a] py-5 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...Array(3)].map((_, setIndex) => (
@@ -136,7 +149,7 @@ const TextRevealSection = () => {
               {marqueeItems.map((item, index) => (
                 <span
                   key={index}
-                  className="mx-10 text-yellow-400 text-base md:text-lg font-medium"
+                  className="mx-10 text-yellow-400 text-lg md:text-xl font-medium"
                 >
                   {item}
                 </span>

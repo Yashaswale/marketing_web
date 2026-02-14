@@ -22,12 +22,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav ref={navRef} className="relative z-50 flex items-center justify-between px-8 py-6 bg-blue-700 backdrop-blur-sm">
+    <nav ref={navRef} className="relative z-50 flex items-center justify-between px-8 py-6 bg-black backdrop-blur-sm">
       <Link to="/" className="flex flex-col items-start">
         {/* Logo + Brand in one line */}
         <div className="flex items-center gap-2 sm:gap-3">
           <img
-            src="/Images/logo1.jpg"
+            src="/Images/logo3.png"
             alt="Zadynco Logo"
             className="h-9 w-9 sm:h-12 sm:w-12 object-contain rounded-full"
           />
@@ -52,41 +52,41 @@ const Navbar = () => {
             SEO
           </button>
           {openDropdown === 'seo' && (
-            <div className="absolute top-full left-0 mt-1 bg-blue-700 shadow-lg rounded-md min-w-[240px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[240px] py-2">
               <Link
                 to="/seo/local"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Local SEO</span>
-                <ChevronRight size={16} className="text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                <span className='font-semibold'>Local SEO</span>
+                <ChevronRight size={16} className="text-blue-700 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/seo/international"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>International SEO</span>
-                <ChevronRight size={16} className="text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                <span className='font-semibold'>International SEO</span>
+                <ChevronRight size={16} className="text-blue-700 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/seo/ecommerce"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Ecommerce SEO</span>
-                <ChevronRight size={16} className="text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold">Ecommerce SEO</span>
+                <ChevronRight size={16} className="text-blue-700 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/seo/page-speed"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Google Page Speed</span>
-                <ChevronRight size={16} className="text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold">Google Page Speed</span>
+                <ChevronRight size={16} className="text-blue-700 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/seo/enterprise"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Enterprise SEO</span>
-                <ChevronRight size={16} className="text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold">Enterprise SEO</span>
+                <ChevronRight size={16} className="text-blue-700 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           )}
@@ -101,34 +101,34 @@ const Navbar = () => {
             Design
           </button>
           {openDropdown === 'design' && (
-            <div className="absolute top-full left-0 mt-1 bg-blue-700 shadow-lg rounded-md min-w-[240px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[240px] py-2">
               <Link
                 to="/design/website"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Website Design</span>
-                <ChevronRight size={16} className="text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold">Website Design</span>
+                <ChevronRight size={16} className="text-blue-700 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/design/app"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>App Design</span>
-                <ChevronRight size={16} className="text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold">App Design</span>
+                <ChevronRight size={16} className="text-blue-700 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/design/branding"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Logo and Product Branding</span>
-                <ChevronRight size={16} className="text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold">Logo and Product Branding</span>
+                <ChevronRight size={16} className="text-blue-700 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/design/creative"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Social Media Creative Design</span>
-                <ChevronRight size={16} className="text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold">Social Media Creative Design</span>
+                <ChevronRight size={16} className="text-blue-700 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           )}
@@ -143,25 +143,25 @@ const Navbar = () => {
             Content
           </button>
           {openDropdown === 'content' && (
-            <div className="absolute top-full left-0 mt-1 bg-blue-700 shadow-lg rounded-md min-w-[260px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[260px] py-2">
               <Link
                 to="/content/personal-brand"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Personal Brand Content</span>
+                <span className="font-semibold">Personal Brand Content</span>
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 group-hover:translate-x-1 transition-transform"
+                  className="text-blue-700 group-hover:translate-x-1 transition-transform"
                 />
               </Link>
               <Link
                 to="/content/short-form-video"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Short-Form Video Content</span>
+                <span className="font-semibold">Short-Form Video Content</span>
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 group-hover:translate-x-1 transition-transform"
+                  className="text-blue-700 group-hover:translate-x-1 transition-transform"
                 />
               </Link>
             </div>
@@ -177,25 +177,25 @@ const Navbar = () => {
             Analytics
           </button>
           {openDropdown === 'analytics' && (
-            <div className="absolute top-full left-0 mt-1 bg-blue-700 shadow-lg rounded-md min-w-[280px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[280px] py-2">
               <Link
                 to="/analytics/strategy"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Analytics Strategy & Setup</span>
+                <span className="font-semibold">Analytics Strategy & Setup</span>
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 group-hover:translate-x-1 transition-transform"
+                  className="text-blue-700 group-hover:translate-x-1 transition-transform"
                 />
               </Link>
               <Link
                 to="/analytics/performance"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Performance & Marketing Analytics</span>
+                <span className="font-semibold">Performance & Marketing Analytics</span>
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 group-hover:translate-x-1 transition-transform"
+                  className="text-blue-700 group-hover:translate-x-1 transition-transform"
                 />
               </Link>
             </div>
@@ -211,35 +211,35 @@ const Navbar = () => {
             Ads
           </button>
           {openDropdown === 'ads' && (
-            <div className="absolute top-full left-0 mt-1 bg-blue-700 shadow-lg rounded-md min-w-[260px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[260px] py-2">
               <Link
                 to="/ads/local"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Local & Hyperlocal Ads</span>
+                <span className="font-semibold">Local & Hyperlocal Ads</span>
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 group-hover:translate-x-1 transition-transform"
+                  className="text-blue-700 group-hover:translate-x-1 transition-transform"
                 />
               </Link>
               <Link
                 to="/ads/ugc"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>UGC & Creator Ads</span>
+                <span className="font-semibold">UGC & Creator Ads</span>
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 group-hover:translate-x-1 transition-transform"
+                  className="text-blue-700 group-hover:translate-x-1 transition-transform"
                 />
               </Link>
               <Link
                 to="/ads/ecommerce"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>E-commerce Ads</span>
+                <span className="font-semibold">E-commerce Ads</span>
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 group-hover:translate-x-1 transition-transform"
+                  className="text-blue-700 group-hover:translate-x-1 transition-transform"
                 />
               </Link>
             </div>
@@ -255,25 +255,25 @@ const Navbar = () => {
             Tech Development
           </button>
           {openDropdown === 'tech' && (
-            <div className="absolute top-full left-0 mt-1 bg-blue-700 shadow-lg rounded-md min-w-[260px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[260px] py-2">
               <Link
                 to="/tech/web"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>Web Development</span>
+                <span className="font-semibold">Web Development</span>
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 group-hover:translate-x-1 transition-transform"
+                  className="text-blue-700 group-hover:translate-x-1 transition-transform"
                 />
               </Link>
               <Link
                 to="/tech/app"
-                className="px-4 py-3 text-white hover:bg-blue-600 transition-colors flex items-center justify-between group"
+                className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
               >
-                <span>App Development</span>
+                <span className="font-semibold">App Development</span>
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 group-hover:translate-x-1 transition-transform"
+                  className="text-blue-700 group-hover:translate-x-1 transition-transform"
                 />
               </Link>
             </div>
@@ -304,7 +304,7 @@ const Navbar = () => {
         </Link>
         <Link
           to="/#contact"
-          className="px-6 py-2 bg-white text-blue-700 font-semibold rounded hover:bg-yellow-400 transition-colors"
+          className="px-6 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-yellow-400 transition-colors"
           onClick={(e) => {
             if (window.location.pathname === '/') {
               e.preventDefault();
@@ -336,50 +336,50 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {isMobileOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-blue-700 shadow-lg max-h-[calc(100vh-80px)] overflow-y-auto">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-yellow-400 shadow-lg max-h-[calc(100vh-80px)] overflow-y-auto">
           <div className="px-4 py-4 space-y-2">
             {/* SEO */}
             <div>
               <button
-                className="w-full flex items-center justify-between text-white hover:text-yellow-400 transition-colors py-3 px-2"
+                className="w-full flex items-center justify-between text-blue-700 hover:bg-yellow-300 transition-colors py-3 px-2 rounded"
                 onClick={() => setMobileOpenCategory(mobileOpenCategory === 'seo' ? null : 'seo')}
               >
-                <span>SEO</span>
+                <span className="font-semibold">SEO</span>
                 {mobileOpenCategory === 'seo' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
               </button>
               {mobileOpenCategory === 'seo' && (
                 <div className="pl-4 space-y-1">
                   <Link
                     to="/seo/local"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Local SEO
                   </Link>
                   <Link
                     to="/seo/international"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     International SEO
                   </Link>
                   <Link
                     to="/seo/ecommerce"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Ecommerce SEO
                   </Link>
                   <Link
                     to="/seo/page-speed"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Google Page Speed
                   </Link>
                   <Link
                     to="/seo/enterprise"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Enterprise SEO
@@ -391,38 +391,38 @@ const Navbar = () => {
             {/* Design */}
             <div>
               <button
-                className="w-full flex items-center justify-between text-white hover:text-yellow-400 transition-colors py-3 px-2"
+                className="w-full flex items-center justify-between text-blue-700 hover:bg-yellow-300 transition-colors py-3 px-2 rounded"
                 onClick={() => setMobileOpenCategory(mobileOpenCategory === 'design' ? null : 'design')}
               >
-                <span>Design</span>
+                <span className="font-semibold">Design</span>
                 {mobileOpenCategory === 'design' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
               </button>
               {mobileOpenCategory === 'design' && (
                 <div className="pl-4 space-y-1">
                   <Link
                     to="/design/website"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Website Design
                   </Link>
                   <Link
                     to="/design/app"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     App Design
                   </Link>
                   <Link
                     to="/design/branding"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Logo and Product Branding
                   </Link>
                   <Link
                     to="/design/creative"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Social Media Creative Design
@@ -434,24 +434,24 @@ const Navbar = () => {
             {/* Content */}
             <div>
               <button
-                className="w-full flex items-center justify-between text-white hover:text-yellow-400 transition-colors py-3 px-2"
+                className="w-full flex items-center justify-between text-blue-700 hover:bg-yellow-300 transition-colors py-3 px-2 rounded"
                 onClick={() => setMobileOpenCategory(mobileOpenCategory === 'content' ? null : 'content')}
               >
-                <span>Content</span>
+                <span className="font-semibold">Content</span>
                 {mobileOpenCategory === 'content' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
               </button>
               {mobileOpenCategory === 'content' && (
                 <div className="pl-4 space-y-1">
                   <Link
                     to="/content/personal-brand"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Personal Brand Content
                   </Link>
                   <Link
                     to="/content/short-form-video"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Short-Form Video Content
@@ -463,24 +463,24 @@ const Navbar = () => {
             {/* Analytics */}
             <div>
               <button
-                className="w-full flex items-center justify-between text-white hover:text-yellow-400 transition-colors py-3 px-2"
+                className="w-full flex items-center justify-between text-blue-700 hover:bg-yellow-300 transition-colors py-3 px-2 rounded"
                 onClick={() => setMobileOpenCategory(mobileOpenCategory === 'analytics' ? null : 'analytics')}
               >
-                <span>Analytics</span>
+                <span className="font-semibold">Analytics</span>
                 {mobileOpenCategory === 'analytics' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
               </button>
               {mobileOpenCategory === 'analytics' && (
                 <div className="pl-4 space-y-1">
                   <Link
                     to="/analytics/strategy"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Analytics Strategy & Setup
                   </Link>
                   <Link
                     to="/analytics/performance"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Performance & Marketing Analytics
@@ -492,31 +492,31 @@ const Navbar = () => {
             {/* Ads */}
             <div>
               <button
-                className="w-full flex items-center justify-between text-white hover:text-yellow-400 transition-colors py-3 px-2"
+                className="w-full flex items-center justify-between text-blue-700 hover:bg-yellow-300 transition-colors py-3 px-2 rounded"
                 onClick={() => setMobileOpenCategory(mobileOpenCategory === 'ads' ? null : 'ads')}
               >
-                <span>Ads</span>
+                <span className="font-semibold">Ads</span>
                 {mobileOpenCategory === 'ads' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
               </button>
               {mobileOpenCategory === 'ads' && (
                 <div className="pl-4 space-y-1">
                   <Link
                     to="/ads/local"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Local & Hyperlocal Ads
                   </Link>
                   <Link
                     to="/ads/ugc"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     UGC & Creator Ads
                   </Link>
                   <Link
                     to="/ads/ecommerce"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     E-commerce Ads
@@ -528,24 +528,24 @@ const Navbar = () => {
             {/* Tech Development */}
             <div>
               <button
-                className="w-full flex items-center justify-between text-white hover:text-yellow-400 transition-colors py-3 px-2"
+                className="w-full flex items-center justify-between text-blue-700 hover:bg-yellow-300 transition-colors py-3 px-2 rounded"
                 onClick={() => setMobileOpenCategory(mobileOpenCategory === 'tech' ? null : 'tech')}
               >
-                <span>Tech Development</span>
+                <span className="font-semibold">Tech Development</span>
                 {mobileOpenCategory === 'tech' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
               </button>
               {mobileOpenCategory === 'tech' && (
                 <div className="pl-4 space-y-1">
                   <Link
                     to="/tech/web"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     Web Development
                   </Link>
                   <Link
                     to="/tech/app"
-                    className="block py-2 px-2 text-white/90 hover:text-yellow-400 transition-colors"
+                    className="block py-2 px-2 text-blue-700 hover:bg-yellow-300 transition-colors rounded font-semibold"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     App Development
@@ -557,7 +557,7 @@ const Navbar = () => {
             {/* About Us */}
             <Link
               to="/#about"
-              className="block text-white hover:text-yellow-400 transition-colors py-3 px-2"
+              className="block text-blue-700 hover:bg-yellow-300 transition-colors py-3 px-2 rounded font-semibold"
               onClick={(e) => {
                 setIsMobileOpen(false);
                 if (window.location.pathname === '/') {
