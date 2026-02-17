@@ -23,10 +23,10 @@ const HeroSection = () => {
           Turning Data, Tech &<br />
           Creativity into Growth
         </h2>
-        <p className="text-xl text-white max-w-3xl">
+        {/* <p className="text-xl text-white max-w-3xl">
           We help individuals and businesses grow with smarter strategies, powerful<br />
           technology, and meaningful creative execution.
-        </p>
+        </p> */}
       </div>
     </section>
   );

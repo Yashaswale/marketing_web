@@ -100,22 +100,22 @@ const ugcAdsServicesData = {
 
 const ugcAdsHeroData = {
     bgColor: "bg-[#C4C6F9]",
-    title: "UGC Ads That Feel Real & Convert Fast",
+    title: "Ads that feel like content, not commercials.",
     description:
-      "We create high-performing UGC ad creatives that blend authenticity with performance—built for Reels, Shorts, and TikTok-style placements.",
+      "UGC & Creator Ads use authentic, creator-led videos to build trust, stop the scroll, and drive conversions. Powered by AI, we identify what real people respond to and scale it across platforms without losing authenticity.",
     ctaText: "Get Started",
     image: "/Images/Ads/ugc_ads/img1.png",
   };
 
 const ugcAdsWhyWorksData = {
-    title: "Why Our UGC Ads Work",
+    title: "Key Benefits of UGC & Creator Ads",
     image: "/Images/Ads/ugc_ads/img6.png",
     points: [
-      "Performance-first creative frameworks",
-      "Platform-native content execution",
-      "Authentic storytelling with brand control",
-      "AI-powered creator matching",
-      "Built for scale across multiple ad channels",
+      "Builds trust through authentic creator-led content",
+      "Drives higher engagement by blending into user feeds",
+      "Reduces ad costs with better-performing creatives",
+      "Enables faster testing and scaling using AI optimization",
+      "Improves conversions with strong social proof",
     ],
   };
   

@@ -81,11 +81,16 @@ const TextRevealSection = () => {
     <>
       <section
         ref={sectionRef}
-        className="pt-28 pb-0 px-6 relative bg-white"
+        className="pt-28 pb-0 px-6 relative bg-white flex flex-col items-center justify-center text-center"
         style={{
           minHeight: "90vh",
         }}
       >
+        <p className="text-xl text-black max-w-3xl">
+          We help individuals and businesses grow with smarter strategies, powerful<br />
+          technology, and meaningful creative execution.
+        </p>
+
 {/* <div className="mx-auto">
         <p className="text-xl text-black text-center max-w-3xl">
           We help individuals and businesses grow with smarter strategies, powerful<br />

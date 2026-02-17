@@ -59,7 +59,7 @@ const EcomServiceRow = ({
               key={i}
               className="flex items-start gap-3 bg-blue-100 px-4 py-3 rounded-md text-gray-700"
             >
-              <span className="text-blue-700 font-bold mt-[2px]">
+              <span className="text-blue-700 font-bold mt-0.5">
                 ▸
               </span>
               {b}
@@ -114,49 +114,49 @@ const AdsBuiltSection = ({ data }) => {
 const ecomAdsServicesData = {
   items: [
     {
-      title: "From Ad Click to Store Visit",
+      title: "Dynamic Product Ads",
       description:
-        "We connect online ads with offline behavior to show exactly which campaigns bring customers through your doors.",
+        "Product ads automatically update based on user behavior and catalog changes.",
       bullets: [
-        "Ad exposure",
-        "Device movement patterns",
-        "Store visit signals",
+        "Personalized product recommendations",
+        "Real-time pricing & availability sync",
+        "Behavior-based product retargeting",
       ],
       buttonText: "Get This Service",
       image: "/Images/Ads/ecom_ads/img2.png",
     },
     {
-      title: "Micro-Area Intelligence",
+      title: "Full-Funnel E-commerce Advertising",
       description:
-        "Instead of targeting entire cities, our AI zooms into the micro-areas that actually convert.",
+        "We activate ads across every stage of the customer journey, ensuring no opportunity is wasted.",
       bullets: [
-        "High-conversion streets",
-        "Low-performing pockets",
-        "Peak-hour hotspots",
+        "Prospecting for new customers",
+        "Retargeting high-intent visitors",
+        "Upselling and cross-selling existing buyers",
       ],
       buttonText: "Get This Service",
       image: "/Images/Ads/ecom_ads/img3.png",
     },
     {
-      title: "Competitor-Proximity Targeting",
+      title: "Platform-Optimized Shopping Ads",
       description:
-        "We position your brand where customers are already deciding.",
+        "Campaigns are tailored to each platform’s buying behavior and ad formats.",
       bullets: [
-        "Enter competitor zones",
-        "Search nearby alternatives",
-        "Linger around similar businesses",
+        "Google Shopping & Performance Max",
+        "Meta catalog & collection ads",
+        "Marketplace-style product placements",
       ],
       buttonText: "Get This Service",
       image: "/Images/Ads/ecom_ads/img4.png",
     },
     {
-      title: "Competitor-Proximity Targeting",
+      title: "Conversion & Revenue Tracking",
       description:
-        "We position your brand where customers are already deciding.",
+        "Every campaign is tracked from ad impression to purchase.",
       bullets: [
-        "Enter competitor zones",
-        "Search nearby alternatives",
-        "Linger around similar businesses",
+        "Product-wise ROAS visibility",
+        "Funnel drop-off analysis",
+        "Revenue attribution dashboards",
       ],
       buttonText: "Get This Service",
       image: "/Images/Ads/ecom_ads/img5.png",
@@ -167,15 +167,15 @@ const ecomAdsServicesData = {
 
 const ecomAdsHeroData = {
   bgColor: "bg-gray-50",
-  title: "E-commerce Ads That Scale Sales & ROAS",
+  title: "Turn product discovery into predictable revenue.",
   description:
-    "We run high-performing e-commerce ad campaigns designed to capture attention, retarget smartly, and convert consistently across platforms.",
+    "AI-powered e-commerce ads that optimize and scale product campaigns from first view to repeat purchase.",
   ctaText: "Start My Campaign",
   image: "/Images/Ads/ecom_ads/img1.png",
 };
 
 const webDesignShowcaseData = {
-  title: "We Design Websites That Turn Visitors into Customers",
+  title: "Ads Built to Capture Attention & Convert",
   image: "/Images/Ads/ecom_ads/img6.png",
 };
 

@@ -3,9 +3,9 @@ export const enterpriseSEOSections = [
     type: "hero",
     bgColor: "bg-[#C4C6F9]",
     buttonColor: "bg-red-600",
-    title: "Enterprise SEO for Large-Scale Growth",
+    title: "Scalable Search Growth for Large Businesses",
     description:
-      "Comprehensive SEO strategies for enterprise-level businesses with complex sites, multiple brands, and massive scale requirements.",
+      "We help enterprises manage, optimize, and scale organic visibility across thousands of pages, multiple markets, and complex site structures using a data-driven Enterprise SEO approach.",
     ctaText: "Get a Enterprise SEO Audit",
     image: "/Images/SEO/ent_seo/img1.png",
   },
@@ -14,11 +14,11 @@ export const enterpriseSEOSections = [
     type: "info",
     title: "What Is Enterprise SEO?",
     description:
-      "Enterprise SEO manages SEO at scale for large organizations with complex site architectures, multiple domains, and extensive content.",
+      "Enterprise SEO focuses on optimizing large-scale websites with high page volumes, multiple categories, complex architectures, and cross-team workflows.",
     points: [
-      "Large corporations",
-      "Multi-brand companies",
-      "Enterprise-level websites",
+      "Maintain consistent SEO performance at scale",
+      "Improve visibility across products, services, and locations",
+      "Align SEO with business, content, and tech teams",
     ],
     image: "/Images/SEO/ent_seo/img2.png",
   },
@@ -30,34 +30,34 @@ export const enterpriseSEOSections = [
     steps: [
       {
         id: "01",
-        title: "Enterprise SEO Audit",
+        title: "Enterprise SEO Audit & Risk Analysis",
         description:
-          "Comprehensive audit of site architecture, technical SEO, and content strategy.",
+          "Audit site architecture, crawlability, indexing, content quality, and technical risks.",
         highlight: true,
       },
       {
         id: "02",
-        title: "Technical Infrastructure",
+        title: "Enterprise SEO Strategy & Governance",
         description:
-          "Optimize crawling, indexing, site structure, and technical performance.",
+          "Define SEO framework, keyword taxonomy, workflows, KPIs, and governance model.",
       },
       {
         id: "03",
-        title: "Content Strategy & Optimization",
+        title: "Technical SEO & Architecture Optimization",
         description:
-          "Develop and optimize content at scale across multiple pages and domains.",
+          "Optimize crawl budget, internal linking, templates, schema, and Core Web Vitals.",
       },
       {
         id: "04",
-        title: "Authority Building & Link Strategy",
+        title: "Content & On-Page Optimization at Scale",
         description:
-          "Build enterprise-level backlink profiles and domain authority.",
+          "Optimize templates, category pages, automation rules, and content prioritization.",
       },
       {
         id: "05",
-        title: "Reporting & Performance Management",
+        title: "Monitoring, Automation & Scaling",
         description:
-          "Advanced reporting, tracking, and ongoing optimization management.",
+          "Track performance, automate reporting, manage updates, and scale winning sections.",
       },
       {
         id: "06",
@@ -73,11 +73,11 @@ export const enterpriseSEOSections = [
     benefitIconColor: "text-red-600",
     benefitIcon: "🏢",
     benefits: [
-      "Scalable SEO across large sites",
-      "Improved organic visibility",
-      "Higher qualified traffic and leads",
-      "Better ROI on marketing investment",
-      "Long-term competitive advantage",
+      "Scalable SEO across thousands of pages",
+      "Better crawl efficiency and indexing control",
+      "Consistent rankings across categories and regions",
+      "Alignment between SEO, content, and tech teams",
+      "Long-term organic growth at enterprise scale",
     ],
   },
 ];

@@ -3,9 +3,9 @@ export const ecommerceSEOSections = [
     type: "hero",
     bgColor: "bg-[#C4C6F9]",
     buttonColor: "bg-green-600",
-    title: "Ecommerce SEO That Drives Sales",
+    title: "Turn Product Searches into Sales",
     description:
-      "Optimize your online store to rank higher, attract more customers, and increase conversions with data-driven SEO strategies.",
+      "We optimize ecommerce websites to rank higher, attract high-intent shoppers, and convert traffic into revenue with a data-driven Ecommerce SEO strategy.",
     ctaText: "Get a SEO Audit",
     image: "/Images/SEO/ecom_seo/img1.png",
   },
@@ -14,11 +14,11 @@ export const ecommerceSEOSections = [
     type: "info",
     title: "What Is Ecommerce SEO?",
     description:
-      "Ecommerce SEO optimizes product pages, categories, and your entire online store to improve search visibility and drive organic traffic.",
+      "Ecommerce SEO focuses on optimizing product pages, category pages, and site structure so your store appears when customers search for products they’re ready to buy. It helps ecommerce brands: Rank for high-purchase-intent keywords Drive organic traffic that converts Reduce dependency on paid ads",
     points: [
-      "Online retailers",
-      "Product-based businesses",
-      "Marketplace sellers",
+      "Rank for high-purchase-intent keywords",
+      "Drive organic traffic that converts",
+      "Reduce dependency on paid ads",
     ],
     image: "/Images/SEO/ecom_seo/img2.png",
   },
@@ -30,34 +30,34 @@ export const ecommerceSEOSections = [
     steps: [
       {
         id: "01",
-        title: "Site Architecture & Technical Audit",
+        title: "Ecommerce SEO Audit & Analysis",
         description:
-          "Optimize site structure, crawlability, and page speed.",
+          "Audit site structure, product pages, categories, competitors, keywords, and technical SEO.",
         highlight: true,
       },
       {
         id: "02",
-        title: "Product Page Optimization",
+        title: "Keyword Strategy & SEO Roadmap",
         description:
-          "Optimize product titles, descriptions, images, and schema markup.",
+          "Define product and category keywords, search intent, internal linking, and KPIs.",
       },
       {
         id: "03",
-        title: "Category & Collection Pages",
+        title: "On-Page & Product Page Optimization",
         description:
-          "Create SEO-friendly category pages with optimized content.",
+          "Optimize titles, descriptions, images, schema, filters, and UX for conversions.",
       },
       {
         id: "04",
-        title: "Content & Link Building",
+        title: "Technical SEO & Performance Optimization",
         description:
-          "Develop content strategy and build quality backlinks.",
+          "Improve crawlability, indexing, page speed, mobile UX, and Core Web Vitals.",
       },
       {
         id: "05",
-        title: "Performance Tracking",
+        title: "Authority, Tracking & Scaling",
         description:
-          "Monitor rankings, traffic, and conversion metrics.",
+          "Build backlinks, track sales-driven SEO metrics, and scale top-performing categories.",
       },
       {
         id: "06",
@@ -73,11 +73,11 @@ export const ecommerceSEOSections = [
     benefitIconColor: "text-green-600",
     benefitIcon: "🛒",
     benefits: [
-      "More organic traffic to product pages",
-      "Higher search rankings for product queries",
-      "Increased online sales and revenue",
-      "Better user experience and site structure",
-      "Long-term sustainable growth",
+      "Higher product and category rankings",
+      "More high-intent organic traffic",
+      "Increased conversions and revenue",
+      "Better site performance and UX",
+      "Long-term growth without ad dependency",
     ],
   },
 ];

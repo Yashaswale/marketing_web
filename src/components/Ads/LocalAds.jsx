@@ -123,27 +123,27 @@ const localAdsServicesData = {
       image: "/Images/Ads/local_ads/img4.png",
     },
     {
-      title: "Competitor-Proximity Targeting",
+      title: "Built for Multi-Location & Franchise Growth",
       description:
-        "We position your brand where customers are already deciding.",
-      subtitle: "We run ads when users:",
+        "Scale without losing performance visibility at each outlet.",
+      subtitle: "You get:",
       bullets: [
-        "Enter competitor zones",
-        "Search nearby alternatives",
-        "Linger around similar businesses",
+        "Location-wise budgets & performance",
+        "Central dashboard with local insights",
+        "Scalable campaigns without operational chaos",
       ],
       buttonText: "Get This Service",
       image: "/Images/Ads/local_ads/img5.png",
     },
     {
-      title: "Competitor-Proximity Targeting",
+      title: "Local Personalization at Scale",
       description:
-        "We position your brand where customers are already deciding.",
-      subtitle: "We run ads when users:",
+        "Your message adapts to each neighborhood without multiplying campaigns..",
+      subtitle: "Our AI dynamically customizes:",
       bullets: [
-        "Enter competitor zones",
-        "Search nearby alternatives",
-        "Linger around similar businesses",
+        "Ad copy by area",
+        "Offers by local demand",
+        "Language & visuals by audience behavior",
       ],
       buttonText: "Get This Service",
       image: "/Images/Ads/local_ads/img6.png",
@@ -153,10 +153,10 @@ const localAdsServicesData = {
 
 const localAdsHeroData = {
   bgColor: "bg-gray-50",
-  title: "Local Ads That Drive Real Footfall & Conversions",
+  title: "Reach the right people, at the right place, at the right moment",
   description:
-    "We run hyper-local ad campaigns that target high-intent zones, track store visits, and help you win customers right when they’re ready to buy.",
-  ctaText: "Get Started",
+    "Reach nearby customers using AI-driven location targeting, from cities to streets, designed for footfall and quick conversions.",
+  ctaText: "Book a Demo",
   image: "/Images/Ads/local_ads/img1.png",
 };
 
