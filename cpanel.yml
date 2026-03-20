@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/camejodn/zadnyco.com/
+
+    - /usr/local/bin/npm install
+    - /usr/local/bin/npm run build
+
+    - /bin/cp -R dist/* $DEPLOYPATH
