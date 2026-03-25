@@ -1,4 +1,4 @@
-import bgVideo from "/Images/bgvideo.mp4";
+import bgVideo from "/bgVideo.mp4";
 
 const HeroSection = () => {
   return (

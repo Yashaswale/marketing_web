@@ -90,7 +90,7 @@ const WorkThatMakesImpact = () => {
 
         {/* LOGO STRIP — full bleed, -mx-6 cancels section padding */}
         <div className="mt-8 -mx-6">
-          <div className="bg-gray-900 w-full fixed bottom-0 left-0 z-40 lg:static lg:w-full overflow-hidden">
+          <div className="bg-gray-900 w-full relative overflow-hidden">
             <div className="relative">
               {/* Left fade */}
               <div
