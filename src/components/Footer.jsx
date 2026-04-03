@@ -132,17 +132,26 @@ function Footer() {
               <h3 className="text-yellow-400 font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-sm">
                 {[
-                  { label: "About Us", href: "#about" },
+                  { label: "About Us", href: "/about" },
                   { label: "How We Work", href: "#how-we-work" },
                   { label: "Tech Development", href: "/tech/web" },
                 ].map((item) => (
                   <li key={item.label}>
-                    <a
-                      href={item.href}
-                      className="text-gray-300 hover:text-yellow-400 transition"
-                    >
-                      {item.label}
-                    </a>
+                    {item.href.startsWith('/') ? (
+                      <Link
+                        to={item.href}
+                        className="text-gray-300 hover:text-yellow-400 transition"
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.href}
+                        className="text-gray-300 hover:text-yellow-400 transition"
+                      >
+                        {item.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

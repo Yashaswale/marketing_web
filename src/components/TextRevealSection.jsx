@@ -6,7 +6,7 @@ const TextRevealSection = () => {
 
   const content = [
     { text: "At Zadynco, we specialize in AI-powered ", type: "text" },
-    { type: "badge", image: "/Images/about4.png" },
+    { type: "badge", image: "/Images/about5.png" },
     { text: "Our intelligent approach helps brands grow faster by combining Data", type: "text" },
     { type: "badge", image: "/Images/about1.png" },
     { text: "technology and", type: "text" },
@@ -81,16 +81,12 @@ const TextRevealSection = () => {
     <>
       <section
         ref={sectionRef}
-        className="pt-28 pb-0 px-6 relative bg-white flex flex-col items-center justify-center text-center"
+        className="py-6 pb-0 px-6 relative bg-white flex flex-col items-center justify-center text-center"
         style={{
           minHeight: "90vh",
         }}
       >
-        <p className="text-xl text-black max-w-3xl">
-          We help individuals and businesses grow with smarter strategies, powerful<br />
-          technology, and meaningful creative execution.
-        </p>
-
+        
 {/* <div className="mx-auto">
         <p className="text-xl text-black text-center max-w-3xl">
           We help individuals and businesses grow with smarter strategies, powerful<br />

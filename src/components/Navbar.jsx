@@ -52,7 +52,7 @@ const Navbar = () => {
             SEO
           </button>
           {openDropdown === 'seo' && (
-            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[240px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-60 py-2">
               <Link
                 to="/seo/local"
                 className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
@@ -101,7 +101,7 @@ const Navbar = () => {
             Design
           </button>
           {openDropdown === 'design' && (
-            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[240px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-60 py-2">
               <Link
                 to="/design/website"
                 className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
@@ -143,7 +143,7 @@ const Navbar = () => {
             Content
           </button>
           {openDropdown === 'content' && (
-            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[260px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-65 py-2">
               <Link
                 to="/content/personal-brand"
                 className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
@@ -177,7 +177,7 @@ const Navbar = () => {
             Analytics
           </button>
           {openDropdown === 'analytics' && (
-            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[280px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-70 py-2">
               <Link
                 to="/analytics/strategy"
                 className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
@@ -211,7 +211,7 @@ const Navbar = () => {
             Ads
           </button>
           {openDropdown === 'ads' && (
-            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[260px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-65 py-2">
               <Link
                 to="/ads/local"
                 className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
@@ -255,7 +255,7 @@ const Navbar = () => {
             Tech Development
           </button>
           {openDropdown === 'tech' && (
-            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-[260px] py-2">
+            <div className="absolute top-full left-0 mt-1 bg-yellow-400 shadow-lg rounded-md min-w-65 py-2">
               <Link
                 to="/tech/web"
                 className="px-4 py-3 text-blue-700 hover:bg-yellow-300 transition-colors flex items-center justify-between group"
@@ -280,25 +280,8 @@ const Navbar = () => {
           )}
         </div>
         <Link
-          to="/#about"
+          to="/about"
           className="text-white hover:text-yellow-400 transition-colors"
-          onClick={(e) => {
-            if (window.location.pathname === '/') {
-              e.preventDefault();
-              const aboutSection = document.getElementById('about');
-              if (aboutSection) {
-                aboutSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            } else {
-              // Let the router handle navigation, then scroll
-              setTimeout(() => {
-                const aboutSection = document.getElementById('about');
-                if (aboutSection) {
-                  aboutSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }, 100);
-            }
-          }}
         >
           About Us
         </Link>
@@ -556,25 +539,9 @@ const Navbar = () => {
 
             {/* About Us */}
             <Link
-              to="/#about"
+              to="/about"
               className="block text-blue-700 hover:bg-yellow-300 transition-colors py-3 px-2 rounded font-semibold"
-              onClick={(e) => {
-                setIsMobileOpen(false);
-                if (window.location.pathname === '/') {
-                  e.preventDefault();
-                  const aboutSection = document.getElementById('about');
-                  if (aboutSection) {
-                    aboutSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                } else {
-                  setTimeout(() => {
-                    const aboutSection = document.getElementById('about');
-                    if (aboutSection) {
-                      aboutSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }, 100);
-                }
-              }}
+              onClick={() => setIsMobileOpen(false)}
             >
               About Us
             </Link>

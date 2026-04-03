@@ -14,6 +14,7 @@ import StatergyAnalytics from './components/Analytics/AnalyticsStatergy';
 import PerformanceAnalytics from './components/Analytics/PerformanceAnalytics';
 import WebDevelopment from './components/TechDevelopment/Webdev';
 import AppDevelopment from './components/TechDevelopment/Appdev';
+import About from './pages/About';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/seo/:type" element={<SEOPage />} />
         <Route path="/design/website" element={<WebsiteDesign />} />
         <Route path="/design/app" element={<AppDesign />} />
