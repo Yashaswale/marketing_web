@@ -164,9 +164,9 @@ const AnalyticsServices = ({ data }) => {
 
   export const analyticsHeroData = {
     bgColor: "bg-[#C4C6F9]",
-    title: "Analytics & Tracking That Helps You Scale Smarter",
+    title: "Turn raw data into clear, confident decisions.",
     description:
-      "We set up tracking, dashboards, and measurement frameworks so you always know what’s working—and what to optimize next.",
+      "Analytics Strategy & Setup builds a strong foundation for data-driven marketing by tracking what matters, connecting every channel, and turning performance data into clear, AI-powered insights.",
     ctaText: "Book a Call",
     image: "/Images/Analytics/statergy_analytics/img1.png",
   };

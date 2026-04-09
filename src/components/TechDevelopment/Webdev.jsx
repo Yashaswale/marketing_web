@@ -39,39 +39,39 @@ const WhatWeDoGrid = ({ data }) => {
     title: "What We Do in Web Development",
     items: [
       {
-        title: "Modern Website Development",
+        title: "Custom Website Development",
         description:
-          "Fast, responsive, and scalable websites built for performance and user experience.",
+          "Fully tailored websites that reflect your brand and drive conversions.",
         image: "/Images/Techdev/Website/img2.png",
       },
       {
-        title: "UI/UX-Focused Design",
+        title: "Landing Pages & Marketing Sites",
         description:
-          "User-first design that improves clarity, trust, and conversions.",
+          "High-impact pages built for campaigns, lead generation, and ads.",
         image: "/Images/Techdev/Website/img3.png",
       },
       {
-        title: "Landing Pages & Funnels",
+        title: "E-commerce Development",
         description:
-          "Conversion-focused pages designed to generate leads and sales.",
+          "Fast, secure online stores optimized for sales and growth.",
         image: "/Images/Techdev/Website/img4.png",
       },
       {
-        title: "Enterprise & Scalable Web Apps",
+        title: "CMS Development (WordPress, Webflow)",
         description:
-          "Secure web apps built to handle growth, integrations, and complex workflows.",
+          "Easy-to-manage websites with powerful flexibility.",
         image: "/Images/Techdev/Website/img5.png",
       },
       {
-        title: "Backend & API Development",
+        title: "Web App Development",
         description:
-          "Reliable backend systems for real-time data, integrations, and future expansion.",
+          "Dashboards, portals, and SaaS platforms built for performance and scale.",
         image: "/Images/Techdev/Website/img6.png",
       },
       {
-        title: "Deployment & Support",
+        title: "Performance & SEO Optimization",
         description:
-          "From launch to updates, maintenance, and performance optimization.",
+          "Speed, accessibility, and search-ready architecture baked in.",
         image: "/Images/Techdev/Website/img7.png",
       },
     ],
@@ -160,26 +160,26 @@ export const webDesignProcessData = {
   steps: [
     {
       step: 1,
-      title: "Understand",
-      description: "Your business, audience, and goals.",
+      title: "Discovery & Strategy",
+      description: "Understand goals, users, competitors, and success metrics.",
       image: "/Images/Techdev/Website/process1.png",
     },
     {
       step: 2,
-      title: "Plan",
-      description: "App structure, user flow, and content layout.",
+      title: "UX/UI Design",
+      description: "Wireframes and visual design focused on clarity and conversion.",
       image: "/Images/Techdev/Website/process2.png",
     },
     {
       step: 3,
-      title: "Design",
-      description: "Clean, modern, and brand-aligned visuals.",
+      title: "Development & QA",
+      description: "Agile development with testing for speed, security, and stability.",
       image: "/Images/Techdev/Website/process3.png",
     },
     {
       step: 4,
-      title: "Review & Refine",
-      description: "Feedback-based improvements.",
+      title: "Launch & Growth Optimization",
+      description: "Go-live, analytics setup, and continuous improvement.",
       image: "/Images/Techdev/Website/process4.png",
     },
   ],
@@ -189,9 +189,9 @@ export const webDesignProcessData = {
   
   export const webDevHeroData = {
     bgColor: "bg-[#C4C6F9]",
-    title: "Web Development That Converts Visitors Into Customers",
+    title: "High-Performance Websites That Convert & Scale",
     description:
-      "We build modern, fast, and scalable websites that look premium, perform smoothly, and drive real business results.",
+      "We build lightning-fast, conversion-focused websites that blend stunning design, smart tech, and marketing-ready architecture to turn visitors into loyal customers.",
     ctaText: "Book a Call",
     image: "/Images/Techdev/Website/img1.png",
   };

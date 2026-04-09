@@ -82,26 +82,26 @@ const WhatWeDoGrid = ({ data }) => {
     steps: [
       {
         step: 1,
-        title: "Understand",
-        description: "Your business, audience, and goals.",
+        title: "Discovery & Strategy",
+        description: "Understand business goals, users, and success metrics.",
         image: "/Images/Techdev/App/process1.png",
       },
       {
         step: 2,
-        title: "Plan",
-        description: "App structure, user flow, and content layout.",
+        title: "UX/UI Design",
+        description: "Wireframes and visual design focused on clarity and engagement.",
         image: "/Images/Techdev/App/process2.png",
       },
       {
         step: 3,
-        title: "Design",
-        description: "Clean, modern, and brand-aligned visuals.",
+        title: "Development & Testing",
+        description: "Agile development with continuous testing for performance and stability.",
         image: "/Images/Techdev/App/process3.png",
       },
       {
         step: 4,
-        title: "Review & Refine",
-        description: "Feedback-based improvements.",
+        title: "Launch & Optimization",
+        description: "App store deployment, analytics setup, and post-launch improvements.",
         image: "/Images/Techdev/App/process4.png",
       },
     ],
@@ -187,17 +187,16 @@ const WhatWeDoGrid = ({ data }) => {
   };
 
   const webDesignShowcaseData = {
-    title: "We Design Websites That Turn Visitors into Customers",
+    title: "We Design Apps People Love to Use",
     image: "/Images/Techdev/App/img8.png",
   };
 
   
   export const webDevHeroData = {
     bgColor: "bg-[#C4C6F9]",
-    title: "Web Development That Converts Visitors Into Customers",
-    description:
-      "We build modern, fast, and scalable websites that look premium, perform smoothly, and drive real business results.",
-    ctaText: "Book a Call",
+    title: "Build Apps That Users Love and Businesses Scale",
+    description:"We design and build high-performance mobile apps with clean design, strong tech, and marketing-ready architecture. From idea to launch, our apps engage users, boost retention, and drive long-term growth.",
+    ctaText: "Book a Demo",
     image: "/Images/Techdev/App/img1.png",
   };
   
