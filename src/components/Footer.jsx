@@ -161,8 +161,12 @@ function Footer() {
         </div>
 
         {/* FOOTER BOTTOM */}
-        <div className="border-t border-white/10 mt-16 pt-6 text-center">
-          <p className="text-xs text-gray-400">
+        <div className="border-t border-white/10 mt-16 pt-6 text-center space-y-3">
+          <div className="text-gray-400 text-sm flex flex-col items-center gap-1">
+            <p>Powered by Dezzex technologies llc-fz</p>
+            <p>Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, United Arab Emirates</p>
+          </div>
+          <p className="text-xs text-gray-500">
             © 2025 Zadynco. All rights reserved.
           </p>
         </div>
