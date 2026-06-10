@@ -286,6 +286,12 @@ const Navbar = () => {
           About Us
         </Link>
         <Link
+          to="/portfolio"
+          className="text-white hover:text-yellow-400 transition-colors"
+        >
+          Portfolio
+        </Link>
+        <Link
           to="/#contact"
           className="px-6 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-yellow-400 transition-colors"
           onClick={(e) => {
@@ -544,6 +550,14 @@ const Navbar = () => {
               onClick={() => setIsMobileOpen(false)}
             >
               About Us
+            </Link>
+            {/* Portfolio */}
+            <Link
+              to="/portfolio"
+              className="block text-blue-700 hover:bg-yellow-300 transition-colors py-3 px-2 rounded font-semibold"
+              onClick={() => setIsMobileOpen(false)}
+            >
+              Portfolio
             </Link>
 
             {/* Book a Call */}

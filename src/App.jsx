@@ -15,6 +15,7 @@ import PerformanceAnalytics from './components/Analytics/PerformanceAnalytics';
 import WebDevelopment from './components/TechDevelopment/Webdev';
 import AppDevelopment from './components/TechDevelopment/Appdev';
 import About from './pages/About';
+import Portfolio from './pages/Portfolio';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/seo/:type" element={<SEOPage />} />
         <Route path="/design/website" element={<WebsiteDesign />} />
         <Route path="/design/app" element={<AppDesign />} />
